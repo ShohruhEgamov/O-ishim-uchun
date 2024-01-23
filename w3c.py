@@ -601,6 +601,10 @@ x = datetime.datetime.now()
 
 print(x)
 
+a = range(0,7)
+for x in a:
+     print(x)
+
 
 
 
