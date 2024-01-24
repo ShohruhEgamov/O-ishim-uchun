@@ -605,7 +605,10 @@ a = range(0,7)
 for x in a:
      print(x)
 
-
+'''i = 1
+while i < 6:
+  print(i)
+  i += 1'''
 
 
 
