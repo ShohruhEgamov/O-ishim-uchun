@@ -31,3 +31,11 @@ y = "John"
 print(type(x))
 print(type(y))
 
+#Python - o'zgaruvchilar nomlari
+
+myvar = "John"
+my_var = "John"
+_my_var = "John"
+myVar = "John"
+MYVAR = "John"
+myvar2 = "John"
