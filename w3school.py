@@ -127,3 +127,62 @@ x = bool(5)
 x = bytes(5)
 x = bytearray(5)
 x = memoryview(bytes(5))
+
+#Python satrlari
+
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+
+#String orqali aylanish
+
+for x in "banana":
+  print(x)
+
+#Satrda ma'lum bir ibora yoki belgi mavjudligini tekshirish
+# uchun biz kalit so'zdan foydalanishimiz mumkin in.
+
+txt = "salom shohruh qalaysan"
+print("shohruh" in txt)
+
+txt = "The best things in life are free!"
+if "free" in txt:
+  print("Yes, 'free' is present.")
+
+#Yo`qligini tekshiring
+txt = "The best things in life are free!"
+if "expensive" not in txt:
+  print("No, 'expensive' is NOT present.")
+
+#Python - satrlarni o'zgartirish
+
+a = "Hello, World!"
+print(a.upper())
+
+a = " Hello, World! "
+print(a.strip()) # returns "Hello, World!"
+
+#Python - Format - Strings
+
+age = 36
+txt = f"My name is John, and I am {age}"
+print(txt)
+
+age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for {} dollars."
+print(myorder.format(quantity, itemno, price))
+
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(myorder.format(quantity, itemno, price))
+
