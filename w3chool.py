@@ -39,3 +39,10 @@ _my_var = "John"
 myVar = "John"
 MYVAR = "John"
 myvar2 = "John"
+
+#Noqonuniy o'zgaruvchilar nomlari:
+
+''' 2myvar = "John"
+	my-var = "John"
+	my var = "John"  '''
+
