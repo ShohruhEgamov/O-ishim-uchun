@@ -595,7 +595,7 @@ while i < 6:
   print(i)
   i += 1'''
 
-import datetime
+'''import datetime
 
 x = datetime.datetime.now()
 
@@ -603,12 +603,14 @@ print(x)
 
 a = range(0,7)
 for x in a:
-     print(x)
+     print(x)'''
 
 '''i = 1
 while i < 6:
   print(i)
   i += 1'''
+
+
 
 
 
