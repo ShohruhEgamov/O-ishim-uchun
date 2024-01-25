@@ -64,3 +64,50 @@ print(x)
 print(y)
 print(z)
 
+#Python - Chiqish o'zgaruvchilari
+
+x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)
+
+x = "Python "
+y = "is "
+z = "awesome"
+print(x + y + z)
+
+#Python - Global o'zgaruvchilar
+
+x = "awesome"
+
+def myfunc():
+  print("Python is " + x)
+
+myfunc()
+
+x = "awesome"
+
+
+#Agar funksiya ichida bir xil nomli o‘zgaruvchi yaratsangiz, 
+#bu o‘zgaruvchi mahalliy bo‘ladi va faqat funksiya ichida ishlatilishi mumkin.
+# Xuddi shu nomdagi global o'zgaruvchi avvalgidek,
+# global va asl qiymati bilan qoladi.
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
+
+#Global kalit so'z
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
+
