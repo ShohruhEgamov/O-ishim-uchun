@@ -275,10 +275,12 @@ or	OR'''
 <<	Zero fill left shift	Shift left by pushing zeros in from the right 
 and let the leftmost bits fall off	x << 2	
 >>	Signed right shift	Shift right by pushing copies of the leftmost bit 
+<<<<<<< HEAD
 in from the left, and let the rightmost bits fall off	x >> 2 '''
 
 a = 20 % 3      # 20 ni 3ga  bo'lib bolib qolgan qoldiqni qaytaradi 
 print(a)
+
 
 
 
