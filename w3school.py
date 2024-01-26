@@ -252,8 +252,6 @@ Identifikatsiya operatorlari
 A'zolik operatorlari
 Bitli operatorlar'''
 
-# Ustinliklar ketma ketligi
-
 '''()	Parentheses	
 **	Exponentiation	
 +x  -x  ~x	Unary plus, unary minus, and bitwise NOT	
@@ -278,4 +276,7 @@ or	OR'''
 and let the leftmost bits fall off	x << 2	
 >>	Signed right shift	Shift right by pushing copies of the leftmost bit 
 in from the left, and let the rightmost bits fall off	x >> 2 '''
+
+a = 20 % 3      # 20 ni 3ga  bo'lib bolib qolgan qoldiqni qaytaradi 
+print(a)
 
