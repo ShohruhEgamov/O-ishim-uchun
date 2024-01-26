@@ -186,3 +186,56 @@ price = 49.95
 myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
 print(myorder.format(quantity, itemno, price))
 
+
+#Python mantiqiy
+
+a = 200
+b = 33
+
+if b > a:
+  print("b katta a dan")
+else:
+  print("b kichik a dan")
+
+
+# bool har qanday malumotlarni baholaydi
+  
+print(bool("abc"))
+print(bool(123))
+print(bool(["apple", "cherry", "banana"]))
+
+#bular false qiymatini qaytaradi
+
+print(bool(False))
+print(bool(None))
+print(bool(0))
+print(bool(""))
+print(bool(()))
+print(bool([]))
+print(bool({}))
+
+# len qaytaruvchisidan qaytarilgan qiymat 0 bo`lsada false qaytaradi
+class myclass():
+  def __len__(self):
+    return 0
+
+myobj = myclass()
+print(bool(myobj))
+
+# mantiqiy qiymat qaytaradigan 
+ 
+def myFunction() :
+  return True
+
+if myFunction():
+  print("YES!")
+else:
+  print("NO!")
+
+# isinstance() Python shuningdek , ob'ektning ma'lum bir
+#ma'lumot turiga tegishli ekanligini aniqlash uchun ishlatilishi mumkin bo'lgan funktsiya 
+#kabi mantiqiy qiymatni qaytaradigan ko'plab o'rnatilgan funktsiyalarga ega :
+
+x = 200
+print(isinstance(x, int))
+
