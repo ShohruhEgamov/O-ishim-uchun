@@ -283,6 +283,7 @@ in from the left, and let the rightmost bits fall off	x >> 2 '''
 a = 20 % 3      # 20 ni 3ga  bo'lib bolib qolgan qoldiqni qaytaradi 
 print(a)
 
+
 #salom mening ismin Shohruh bugun sana 27.01.2024
 
 
