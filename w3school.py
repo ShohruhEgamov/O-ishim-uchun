@@ -224,7 +224,7 @@ print(bool(myobj))
 
 # mantiqiy qiymat qaytaradigan 
  
-def myFunction() :
+def myFunction():
   return True
 
 if myFunction():
@@ -238,4 +238,17 @@ else:
 
 x = 200
 print(isinstance(x, int))
+
+
+#Python operatorlari
+
+'''Python operatorlarni quyidagi guruhlarga ajratadi:
+
+Arifmetik operatorlar
+Belgilash operatorlari
+Taqqoslash operatorlari
+Mantiqiy operatorlar
+Identifikatsiya operatorlari
+A'zolik operatorlari
+Bitli operatorlar'''
 
