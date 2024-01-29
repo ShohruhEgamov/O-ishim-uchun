@@ -286,5 +286,111 @@ print(a)
 
 #salom mening ismin Shohruh bugun sana 27.01.2024
 
+# Python ro'yhatlar
+
+thislist = ["apple", "banana", "cherry"]
+a = int(input("son kirit "))
+b = input("soz kirit ")
+thislist[a] = b
+
+print(thislist)
+
+
+meva = ["apple", "banana", "cherry"]
+meva.remove("banana")
+print(meva)
+
+# belgilangan indexni olib tashlash
+
+meva = ["apple", "banana", "cherry"]
+meva.pop(1)  # index korsatmasa oxirgi belgini olib tashlaydi
+print(meva)
+
+# kali del indexni olib tashlaydi. u royhatni ham ochirib yuboradi
+
+meva = ["apple", "banana", "cherry"]
+del meva[0]
+print(meva)
+
+# ro'yhatni tozalash
+
+meva = ["apple", "banana", "cherry"]
+meva.clean()
+print(meva)
+
+# loop dan foydalanish
+
+meva = ["apple", "banana", "cherry"]
+for i in range(len(meva)):
+  print(meva[i])
+
+# while siklidan foydalanish
+  
+meva = ["apple", "banana", "cherry"]
+i = 0
+while i < len(meva):
+  print(meva[i])
+  i = i + 1
+
+
+# ro'yhatlarni tushunish
+
+meva = ["apple", "banana", "cherry"]
+yangi = []
+
+for x in fruits:
+  if "a" in x:
+    yangi.append(x)
+print(yangi)
+
+meva = [x for x in meva if x != "apple"] # olmadan boshqa hammasini chiqaradi
+
+newlist = [x for x in range(10) if x < 5] # 5 dan kichiklarni chiqaradi
+
+newlist = ['hello' for x in fruits] # hammasini helloga aylantirish
+
+newlist = [x if x != "banana" else "orange" for x in fruits] # bananni apelsinga almashtirish
+
+newlist = [x.upper() for x in fruits] # ifodani qiymatlarni katta harif bilan belgilash
+
+meva = ["orange", "mango", "kiwi", "pineapple", "banana"]   # alfanumerik tartiblash
+meva.sort() # (reverse = True) kamayish boyicha tartiblash
+print(meva)
+
+# raqamni ozingiz saralaysiz. 50 ga yaqin sonlardan
+
+def myfunc(n):
+  return abs(n - 50)
+
+son = [100, 50, 65, 82, 23]
+son.sort(key = myfunc) # sort katta hariflarni oldin korsatadi agar siz buni hohlamasangiz "key = str.lower"
+print(son)             # .reverse() ro'yhatni teskari tartiblaydi
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()  # kopyalash "list(thislist)" bu ham kopyalashni bir yo'li
+print(mylist)
+
+
+
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+list1.extend(list2)  #extend()Ro'yxat 1 ning oxiriga list2 qo'shish uchun usuldan foydalaning :
+print(list1)
+
+for x in list2:
+  list1.append(x)  
+
+list3 = list1 + list2
+
+
+
+
+
+
+
+
+
+
 
 
