@@ -338,7 +338,7 @@ while i < len(meva):
 meva = ["apple", "banana", "cherry"]
 yangi = []
 
-for x in fruits:
+for x in meva:
   if "a" in x:
     yangi.append(x)
 print(yangi)
@@ -385,11 +385,84 @@ list3 = list1 + list2
 
 
 
+# Python kortejlari
+
+#Tupleda "olma" mavjudligini tekshiring:
+
+thistuple = ("apple", "banana", "cherry")
+if "apple" in thistuple:
+  print("Yes, 'apple' is in the fruits tuple")
+
+# KARTEJGA QOSHISH
+  
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+
+# kartejga kartej qoshish
+
+thistuple = ("apple", "banana", "cherry")
+y = ("orange",)
+thistuple += y
+
+print(thistuple)
 
 
+# Element olib tashlash
+
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+
+# hammasini o'chirish
+
+thistuple = ("apple", "banana", "cherry")
+del thislist
+print(thislist)
 
 
+fruits = ("apple", "banana", "cherry")
 
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+
+# Python - Loop Tuples
+
+fruits = ("apple", "banana", "cherry")
+for x in fruits:
+  print(x)
+
+
+fruits = ("apple", "banana", "cherry")
+for i in range(len(fruits)):
+  print(fruits[i])
+
+
+# while siklidan foydalanish
+
+fruits = ("apple", "banana", "cherry")
+i = 0
+while i < len(fruits):
+  print(fruits[i])
+  i = i + 1
+
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple)
 
 
 
