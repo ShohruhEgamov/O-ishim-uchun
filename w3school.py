@@ -315,7 +315,7 @@ print(meva)
 # ro'yhatni tozalash
 
 meva = ["apple", "banana", "cherry"]
-meva.clean()
+meva.clear()
 print(meva)
 
 # loop dan foydalanish
@@ -426,8 +426,8 @@ thistuple = tuple(y)
 # hammasini o'chirish
 
 thistuple = ("apple", "banana", "cherry")
-del thislist
-print(thislist)
+#del thistuple # bu hatoni keltirib chiqaradi. chunki kartej endi yo'q
+print(thistuple)
 
 
 fruits = ("apple", "banana", "cherry")
@@ -463,6 +463,100 @@ fruits = ("apple", "banana", "cherry")
 mytuple = fruits * 2
 
 print(mytuple)
+
+
+
+#Python to'plamlari
+
+#Quyidagi usul yordamida to'plamga element qo'shing add() 
+
+set = {"apple", "banana", "cherry"}
+
+set.add("orange")
+
+print(set)
+
+#Joriy to'plamga boshqa to'plamdan elementlar qo'shish uchun update() usuldan foydalaning.
+
+set = {"apple", "banana", "cherry"}
+tropical = {"pineapple", "mango", "papaya"}
+
+set.update(tropical)
+
+print(set)
+
+
+# faqat toplam emas hamma narsa qoshiladi
+
+set = {"apple", "banana", "cherry"}
+mylist = ["pineapple", "mango", "papaya"]
+
+set.update(mylist)
+print(set)
+
+#To'plamdagi elementni olib tashlash uchun , remove() yoki discard()usulidan foydalaning.
+
+set = {"apple", "banana", "cherry"}
+set.remove("banana") # ochiriladigan elemen bolmasa hato beradi
+print(set)
+
+set = {"apple", "banana", "cherry"}
+set.discard("banana") # ochiriladigan element bolmasa hato bermaydi
+print(set)
+
+# usul pop() element belgilanmasa hohlagan elementni olib tashlaydi
+set = {"apple", "banana", "cherry"}
+
+x = set.pop()
+
+print(x)
+print(set)
+
+#Usul clear() to'plamni bo'shatadi:
+set = {"apple", "banana", "cherry"}
+set.clear()
+print(set)
+
+#Kalit delso'z to'plamni butunlay o'chirib tashlaydi:
+set = {"apple", "banana", "cherry"}
+del set
+print(set)
+
+# Usul union()ikkala to'plamdagi barcha elementlar bilan yangi to'plamni qaytaradi:
+
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+
+set3 = set1.union(set2)
+print(set3)
+
+# Usul intersection_update()faqat ikkala to'plamda mavjud bo'lgan narsalarni saqlaydi.
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.intersection_update(y)
+print(x)
+
+#Usul faqat ikkala to'plamda mavjud bo'lgan narsalarni o'z ichiga olgan yangiintersection() to'plamni qaytaradi .
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.intersection(y)
+print(x)
+
+# Usul symmetric_difference_update()faqat ikkala to'plamda mavjud bo'lmagan elementlarni saqlaydi.
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.symmetric_difference_update(y)
+print(x)
+
+
+
+
+
 
 
 
