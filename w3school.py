@@ -555,9 +555,267 @@ print(x)
 
 
 
+#Python Lugatlar
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+
+#Lug'atning "brend" qiymatini chop eting:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+
+#Lug'at elementlaridagi qiymatlar har qanday turdagi ma'lumotlarga ega bo'lishi mumkin:
+
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
 
 
+#Lug'at yaratish uchun dict() usulidan foydalanish:
+
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
 
 
+#get()Sizga bir xil natija beradigan usul ham mavjud :
+
+#Misol
+#"Model" kalitining qiymatini oling:
+
+#x = thisdict.get("model")
+
+#Usul keys()lug'atdagi barcha kalitlarning ro'yxatini qaytaradi.
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = thisdict.keys()
+
+print(x)
+
+
+#Yangi kiritish
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.keys()
+
+print(x) #before the change
+
+car["color"] = "white"
+
+print(x) #after the change
+
+
+#Hamma royhatlarni oladi. 
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = thisdict.values()
+
+print(x)
+
+#Asl lug'atga o'zgartirish kiriting va qiymatlar ro'yxati ham yangilanishini ko'ring:
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.values()
+
+print(x) #before the change
+
+car["year"] = 2020
+
+print(x) #after the change
+
+#Asl lug'atga yangi element qo'shing va qiymatlar ro'yxati ham yangilanishini ko'ring:
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.values()
+
+print(x) #before the change
+
+car["color"] = "red"
+
+print(x) #after the change
+
+
+#Usul items()lug'atdagi har bir elementni ro'yxatdagi kortejlar sifatida qaytaradi.
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.items()
+
+print(x) #before the change
+
+car["year"] = 2020
+
+print(x) #after the change
+
+#Lug'atda belgilangan kalit mavjudligini aniqlash uchun inkalit so'zdan foydalaning:
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary")
+
+
+#Usul update()lug'atni berilgan argumentdagi elementlar bilan yangilaydi.Agar element mavjud bo'lmasa, element qo'shiladi.
+
+#Argument lug'at yoki kalit: qiymat juftliklari bilan takrorlanadigan ob'ekt bo'lishi kerak.
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+
+#Usul pop()belgilangan kalit nomi bilan elementni olib tashlaydi:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+
+#Usul popitem()oxirgi kiritilgan elementni olib tashlaydi (3.7 dan oldingi versiyalarda uning o'rniga tasodifiy element o'chiriladi):
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+
+#Kalit delso'z belgilangan kalit nomi bilan elementni olib tashlaydi:
+
+#Usul clear()lug'atni bo'shatadi:
+
+#values()Lug'at qiymatlarini qaytarish uchun usuldan ham foydalanishingiz mumkin :
+
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.values():
+  print(x)
+
+
+#Usul clear()lug'atni bo'shatadi:
+
+#Usul bilan lug'at nusxasini yarating copy():
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+
+#Funktsiyaga ega lug'at nusxasini yarating dict() :
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = dict(thisdict)
+print(mydict)
+
+#ichki lugat yaratish
+
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+#Ichki lug'atdagi elementlarga kirish uchun siz tashqi lug'atdan boshlab lug'atlar nomidan foydalanasiz:
+
+print(myfamily["child2"]["name"])
+
+#3 ta tugma bilan lug'at yarating, ularning barchasi 0 qiymatiga ega:
+
+x = ('key1', 'key2', 'key3')
+y = 0
+
+thisdict = dict.fromkeys(x, y)
+
+print(thisdict)
+
+#Usul fromkeys()belgilangan kalitlarga va belgilangan qiymatga ega lug'atni qaytaradi.
+
+#Usul setdefault()belgilangan kalit bilan elementning qiymatini qaytaradi.
+
+#Agar kalit mavjud bo'lmasa, kalitni belgilangan qiymat bilan kiriting, quyidagi misolga qarang
+
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.setdefault("color", "White")
+
+print(x)
 
 
