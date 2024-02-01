@@ -925,3 +925,43 @@ while i < 6:
   if i == 3:
     continue  # amal 3 ni tashlab otib ketadi
   print(i)
+
+  # Looplar uchun Python
+
+  a = ["apple", "banana", "cherry","nok","anjir","olma", "olcha"]
+  for x in a:
+   #print(x) # bu cherryni ham chiqaradi
+    if x == "cherry":
+      break
+    print(x) # bu cherrydan oldingilarnichiqaradi
+
+a = ["apple", "banana", "cherry","nok","anjir","olma", "olcha"]
+
+for x in a:
+  if x == "cherry":
+    continue
+  print(x)
+
+#  range () funktsiyasi sukut bo'yicha 0 dan boshlanadigan raqamlar ketma-ketligini qaytaradi va 1 ga (sukut bo'yicha) ortadi va belgilangan raqamda tugaydi.
+  
+for x in range(6): # 0 dan 6 gacha
+  print(x)
+
+for x in range(1, 6): # qaysidan boshlashni bildiradi
+  print(x)
+
+
+for x in range(2,30,3):
+  print(x)             # nechidan boshlab nechigacha nechi oshirishi bildiradi
+
+for x in range(6):
+  print(x)
+else:
+  print("Finally finished!")
+
+a = ["red", "big", "tasty"]
+b = ["apple", "banana", "cherry"]
+
+for x in a:
+  for y in b:
+    print(x,y)
