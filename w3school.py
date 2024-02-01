@@ -899,3 +899,29 @@ b = 200
 if b > a:
   pass
 
+# Python while loops
+
+# while tsikli bilan biz shart to'g'ri bo'lsa, bir qator bayonotlarni bajarishimiz mumkin.
+
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+
+# break iborasi yordamida biz while sharti to'g'ri bo'lsa ham tsiklni to'xtata olamiz:
+
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+
+# continue (Davom etish) iborasi bilan biz joriy iteratsiyani to'xtatib, keyingisini davom ettirishimiz mumkin:
+
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue  # amal 3 ni tashlab otib ketadi
+  print(i)
