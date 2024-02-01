@@ -289,8 +289,8 @@ print(a)
 # Python ro'yhatlar
 
 thislist = ["apple", "banana", "cherry"]
-a = int(input("son kirit "))
-b = input("soz kirit ")
+#a = int(input("son kirit "))
+#b = input("soz kirit ")
 thislist[a] = b
 
 print(thislist)
@@ -818,4 +818,84 @@ x = car.setdefault("color", "White")
 
 print(x)
 
+
+# Python shartlari va If iboralari
+
+#Teng: a == b
+#Teng emas: a != b
+#Kichikroq: a < b
+#Kichik yoki teng: a <= b
+#Kattaroq: a > b
+#dan katta yoki teng: a >= b
+
+# Elif kalit so'zi Pythonning "agar oldingi shartlar to'g'ri bo'lmagan bo'lsa, bu shartni sinab ko'ring" deyish usulidir.
+
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+
+#Ushbu misolda a b ga teng , shuning uchun birinchi shart to'g'ri emas, lekin elif sharti to'g'ri, shuning uchun biz "a va b teng" deb ekranga chop etamiz.
+  
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+
+# QISQA QOL
+if a > b: print("a is greater than b")
+
+# bu satirga kop buyruq joylashtiramiz
+
+a = 340
+b = 330
+print(("A") if a > b else print("Teng") if a == b else("B"))
+
+# Qaysi katta bo'lsa shuni chiqaradi
+
+a = 200
+b = 33
+c = 500
+if a > b and c > a:
+  print("Bu to'g'ri")
+
+#Kalit or (yoki) so'z mantiqiy operator bo'lib, shartli gaplarni birlashtirish uchun ishlatiladi:
+
+a = 200
+b = 33
+c = 500
+if a > b or a > c:
+  print("ikkalasindan biri katta")
+
+# Kalit notso'z mantiqiy operator bo'lib, shartli gapning natijasini teskari o'zgartirish uchun ishlatiladi:
+
+a = 33
+b = 200
+if not a > b:
+  print("a katta emas b dan")
+
+# Siz bayonotlar ifichida bayonotlarga ega bo'lishingiz mumkin, bu ichki iboralar ifdeb ataladi . if
+
+x = 15
+
+if x > 10:
+  print("10 katta")
+  if x > 20:
+    print("20 x dan katta")
+  else:
+    print("20 kichik x")
+
+# ifbayonotlar bo'sh bo'lishi mumkin emas, lekin agar sizda biron sababga ko'ra ifmazmunsiz bayonot bo'lsa, passxatolikka yo'l qo'ymaslik uchun bayonotni kiriting.
+
+a = 33
+b = 200
+
+if b > a:
+  pass
 
