@@ -965,3 +965,106 @@ b = ["apple", "banana", "cherry"]
 for x in a:
   for y in b:
     print(x,y)
+
+
+# Python funktsiyalari
+    
+def a():
+  print("Salom dunyo")
+a()
+
+def funksiya(fname):
+  print(fname + " Egamov")
+
+funksiya("Shohruh")
+funksiya("Diyorbek")
+funksiya("farrux")
+funksiya("Bekmirza")
+
+#Bu funksiya 2 ta argumentni kutadi va 2 ta argumentni oladi:
+
+def funksiya(fname,lname):
+  print(fname + " " + lname)
+
+funksiya("Shohruh", "Egamov")
+
+#Agar argumentlar soni noma'lum bo'lsa, *parametr nomidan oldin a qo'shing:
+
+def funksiya(*kids):
+  print("Bu odamni ismi " + kids[0])
+funksiya("Shohruh", "Farrux", "Diyorbek")
+
+def funksiya(bola1, bola2, bola3):
+  print("Bu bolaning ismi " + bola2)
+funksiya(bola1="Shohruh", bola2="Diyorbek",bola3="Bekmirza")
+
+#Agar kalit so'z argumentlari soni noma'lum bo'lsa, **parametr nomidan oldin ikkita qo'shing:
+
+def funksiya(**bola):
+  print("Bu bola ismi " + bola["fname"])
+funksiya(fname = "Farrux", lname = "Shohruh")
+
+#Agar funktsiyani argumentsiz chaqirsak, u standart qiymatdan foydalanadi:
+
+def funksiya(mamlakat = "Uzbekistan"):
+  print("Men " + mamlakat + "likman")
+funksiya("Koreya")
+funksiya("Yaponya")
+funksiya()
+
+def  funksiya(food):
+  for x in food:
+    print(x)
+meva = ["apple", "banana", "cherry"]
+
+funksiya(meva)
+
+#Funktsiyaga qiymat qaytarishiga ruxsat berish uchun quyidagi return bayonotdan foydalaning:
+
+def funksiya(x):
+  return 5 * x
+print(funksiya(3))
+print(funksiya(5))
+print(funksiya(9))
+
+def funksiya(x, /):
+  print(x)
+funksiya(4)
+
+#Agar , /funktsiya pozitsion argumentlarni kutsa ham, busiz sizga kalit so'z argumentlaridan foydalanishga ruxsat beriladi:
+
+def funksiya(x):
+  print(x)
+funksiya(x = 3)
+
+#Agar funktsiya kalit so'z argumentlarini kutsa ham, busiz *, sizga pozitsion argumentlardan foydalanishga ruxsat beriladi:
+
+def my_function(x):
+  print(x)
+
+my_function(3)
+
+def funksiya(a,b,/,*,c,d):
+  print(a+b+c+d)
+funksiya(5,6, c=7, d=8)
+
+'''Python funksiya rekursiyasini ham qabul qiladi, ya'ni belgilangan funksiya o'zini chaqira oladi.
+
+Rekursiya umumiy matematik va dasturlash tushunchasidir. Bu funktsiya o'zini chaqirishini anglatadi. Buning afzalligi shundaki, natijaga erishish uchun ma'lumotlar orqali aylanishingiz mumkin.
+
+Ishlab chiquvchi rekursiya bilan juda ehtiyot bo'lishi kerak, chunki hech qachon tugamaydigan yoki ortiqcha xotira yoki protsessor quvvatini ishlatadigan funktsiyani yozish juda oson bo'lishi mumkin. Biroq, to'g'ri yozilsa, rekursiya dasturlashda juda samarali va matematik jihatdan oqlangan yondashuv bo'lishi mumkin.
+
+Ushbu misolda tri_recursion() funksiyasi biz o'zini chaqirish uchun belgilagan (“recurse”). Biz k o'zgaruvchisidan ma'lumot sifatida foydalanamiz , bu har safar takrorlanganda ( -1 ) kamayadi. Rekursiya shart 0 dan katta bo'lmaganda (ya'ni 0 bo'lganda) tugaydi.
+
+Yangi ishlab chiquvchi uchun bu aniq qanday ishlashini aniqlash biroz vaqt talab qilishi mumkin, buni aniqlashning eng yaxshi usuli uni sinab ko'rish va o'zgartirishdir.'''
+
+def tri_recursion(k):
+  if(k > 0):
+    result = k + tri_recursion(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
