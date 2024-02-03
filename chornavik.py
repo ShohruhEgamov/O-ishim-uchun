@@ -22,7 +22,7 @@ while i < len(a):
   print("Bu odamni ismi " + kids[a])
 funksiya("Shohruh", "Farrux", "Diyorbek")'''
 
-def tri_recursion(k):
+'''def tri_recursion(k):
   if(k > 0):
     result = k + tri_recursion(k - 1)
     print(result)
@@ -31,4 +31,19 @@ def tri_recursion(k):
   return result
 
 print("\n\nRecursion Example Results")
-tri_recursion(6)
+tri_recursion(6)'''
+
+'''x = lambda a : a + 10
+print(x(5))'''
+
+'''x = lambda a,b : a*b
+print(x(5, 6))'''
+
+'''x = lambda son, sifat: son+sifat
+print(x(6, 8))'''
+
+'''def funk(n):
+  return lambda a: a*n
+son = funk(2)
+
+print(son(11))'''

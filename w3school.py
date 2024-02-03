@@ -1068,3 +1068,50 @@ def tri_recursion(k):
 
 print("\n\nRecursion Example Results")
 tri_recursion(6)
+
+# Python Lambda
+
+x = lambda a : a + 10
+print(x(5))
+
+x = lambda a,b : a*b
+print(x(5, 6))
+
+def funk(n):
+  return lambda a: a*n
+
+son = funk(2)
+sifat = funk(3)
+
+print(son(11))
+print(sifat(11))
+
+# declare a lambda function
+greet = lambda : print('Hello World')
+
+# call lambda function
+greet()
+
+# Output: Hello World
+
+# Program to double each item in a list using map()
+
+my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+
+new_list = list(map(lambda x: x * 2 , my_list))
+
+print(new_list)
+
+# Output: [2, 10, 8, 12, 16, 22, 6, 24]
+
+# program to filter out only the even items from a list
+my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+
+new_list = list(filter(lambda x: (x%2 == 0) , my_list))
+
+print(new_list)
+
+# Output: [4, 6, 8, 12]
+
+
+
