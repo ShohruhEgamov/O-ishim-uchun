@@ -1115,3 +1115,29 @@ print(new_list)
 
 
 
+
+
+# Python massivlari
+#Massivlar bir nechta qiymatlarni bitta o'zgaruvchida saqlash uchun ishlatiladi:
+cars = ["Ford", "Volvo", "BMW"]
+
+#Massiv - bu bir vaqtning o'zida bir nechta qiymatlarni ushlab turishi mumkin bo'lgan maxsus o'zgaruvchi.
+car1 = "Ford"
+car2 = "Volvo"
+car3 = "BMW"
+
+x = cars[0] # x = cars[0] = "Tayota"
+
+print(x)
+
+# len()Massiv uzunligini (massivdagi elementlar soni) qaytarish uchun usuldan foydalaning .
+
+for x in cars:
+  print(x)
+
+#append()Massivga element qo'shish uchun usuldan foydalanishingiz mumkin .
+cars.append("Honda")
+
+# pop()Massivdan elementni olib tashlash uchun usuldan foydalanishingiz mumkin .
+cars.pop(1)
+
