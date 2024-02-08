@@ -1141,3 +1141,34 @@ cars.append("Honda")
 # pop()Massivdan elementni olib tashlash uchun usuldan foydalanishingiz mumkin .
 cars.pop(1)
 
+# remove()Massivdan elementni olib tashlash uchun ham usuldan foydalanishingiz mumkin .
+#cars.remove("Volvo")
+
+'''Eslatma: Ro'yxat remove()usuli faqat ko'rsatilgan qiymatning birinchi takrorlanishini olib tashlaydi.'''
+
+# Python sinflari va ob'ektlari
+
+class MyClass:
+  x = 5
+
+p1 = MyClass()
+print(p1.x)
+
+class Person:
+  def __init__(x, ism, yosh):
+    x.ism = ism
+    x.yosh = yosh
+
+p1 = Person("John", 36)
+
+print(p1.ism)
+print(p1.yosh)
+
+class Person:
+  def __init__(x, ism, yosh):
+    x.ism = ism
+    x.yosh = yosh
+  def __str__(x):
+    return f"{x.ism}({x.yosh})"
+p1 = Person("Shohruh", 24)
+print(p1)

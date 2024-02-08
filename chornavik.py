@@ -47,3 +47,8 @@ print(x(6, 8))'''
 son = funk(2)
 
 print(son(11))'''
+
+
+the_world_is_flat = True
+if the_world_is_flat:
+    print("Be careful not to fall off!")
