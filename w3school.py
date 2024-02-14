@@ -1173,6 +1173,7 @@ class Person:
 p1 = Person("Shohruh", 24)
 print(p1)
 
+# Python merosi 
 class Person:
 	def __init__(self, fname, lname):
 		self.firsname = fname
