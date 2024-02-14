@@ -1172,3 +1172,27 @@ class Person:
     return f"{x.ism}({x.yosh})"
 p1 = Person("Shohruh", 24)
 print(p1)
+
+class Person:
+	def __init__(self, fname, lname):
+		self.firsname = fname
+		self.lestname = lname
+
+	def printname(self):
+		print(self.firsname, self.lestname)
+
+x = Person("Shohruh",24)
+x.printname()
+
+class Student(Person):
+	def __init__(self, fname, lname, year):
+		#Person.__init__(self, fname, lname)
+		super().__init__(fname, lname)
+		self.yangi = year
+
+	def welcom(self):
+		print("Ismi", self.firsname, "Familya", self.lestname, "tug`ilgan yili", self.yangi )
+
+x = Student("Farruh", "Egamov", 1998)
+x.welcom()
+

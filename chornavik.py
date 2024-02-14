@@ -49,6 +49,22 @@ son = funk(2)
 print(son(11))'''
 
 
-the_world_is_flat = True
+'''the_world_is_flat = True
 if the_world_is_flat:
-    print("Be careful not to fall off!")
+    print("Be careful not to fall off!")'''
+
+'''class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfunc(self):
+    print("Hello my name is " + self.name)
+    print("I am " + str(self.age))
+x = input("What is you name ")
+z = input("Hov old are you ")
+p1 = Person(x, z)
+p1.myfunc()'''
+
+
+
