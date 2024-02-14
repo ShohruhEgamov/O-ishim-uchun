@@ -1197,3 +1197,6 @@ class Student(Person):
 x = Student("Farruh", "Egamov", 1998)
 x.welcom()
 
+
+
+print("salom")
