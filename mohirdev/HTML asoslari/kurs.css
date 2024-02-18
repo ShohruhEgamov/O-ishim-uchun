@@ -15,8 +15,8 @@ p {
 	text-align: center;
 	font-weight: bold;
 	border: 3px solid green;
-	background-color: #acda00;
-	background: linear-gradient(to top, #00ff00 0%, #ff3399 54%);
+	background-color: darkturquoise;
+	background: hsl(184, 89%, 50%);
 	padding: 30px;
 	margin: 50px;
 }
@@ -29,6 +29,14 @@ blockquote {
 	border: 2px solid grey;
 	background-color: hsl(127, 89%, 20%);
 
+}
+
+blockquote:hover {
+	color: blue;
+}
+
+blockquote:active {
+	color: black;
 }
 
 body {
@@ -46,9 +54,7 @@ address {
 	color: #00ff00;
 }
 
-h3 {
-	color: #ff3399;
-}
+
 
 /*
 a:link {
@@ -141,4 +147,48 @@ address:visited {
 address:hover,
 address:active {
 	color: black;
+}
+
+h3 {
+	color: white;
+}
+
+h3:link {
+	color: white;
+}
+
+h3:visited {
+	color: white
+}
+
+h3:hover {
+	color: #00ff00;
+}
+
+h3:active {
+	color: blue;
+}
+
+.spiner {
+	background-color: black;
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	border: 25px solid green;
+	border-top: 20px solid blue;
+	animation: rotate 2.5s linear infinite;
+}
+
+body {
+	background-image: url(img_7.PNG);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
 }
