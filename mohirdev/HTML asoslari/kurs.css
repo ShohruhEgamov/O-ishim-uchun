@@ -192,3 +192,40 @@ body {
 		transform: rotate(360deg);
 	}
 }
+
+
+
+/*Bu tablo bolimi*/
+
+table {
+	color: red;
+	font-size: 100px;
+	padding: 50px;
+	text-align: center;
+	width: 400px
+}
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+td:hover {
+	border: 5px solid black;
+	color: white;
+	background-color: grey;
+}
+
+th {
+	color: red;
+	padding: 30px;
+	border: 5px solid blue;
+}
+
+th:hover {
+	border: 5px solid blue;
+	color: white;
+	background-color: black;
+
+}

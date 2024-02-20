@@ -809,9 +809,9 @@ print(thisdict)
 #Agar kalit mavjud bo'lmasa, kalitni belgilangan qiymat bilan kiriting, quyidagi misolga qarang
 
 car = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
 }
 
 x = car.setdefault("color", "White")
@@ -821,12 +821,12 @@ print(x)
 
 # Python shartlari va If iboralari
 
-#Teng: a == b
-#Teng emas: a != b
-#Kichikroq: a < b
-#Kichik yoki teng: a <= b
-#Kattaroq: a > b
-#dan katta yoki teng: a >= b
+# Teng: a == b
+# Teng emas: a != b
+# Kichikroq: a < b
+# Kichik yoki teng: a <= b
+# Kattaroq: a > b
+# dan katta yoki teng: a >= b
 
 # Elif kalit so'zi Pythonning "agar oldingi shartlar to'g'ri bo'lmagan bo'lsa, bu shartni sinab ko'ring" deyish usulidir.
 

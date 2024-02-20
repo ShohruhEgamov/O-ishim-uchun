@@ -9,5 +9,4 @@ personal = {
     "ism": "shohruh",
     "yosh": "23",
     "mamlakat": "urgench"
-
 }
