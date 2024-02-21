@@ -11,24 +11,31 @@
 		border: 5px solid blue;
 		background-color: width;
 		border-radius: 20px;
+		border-style: double;
 	}
 
-	th,
+	th{
+		padding: 10px;
+		border: 2px inset black;
+		border-radius: 15px;
+		font-size: 150%;
+	}
 	td {
 		padding: 10px;
-		border: 2px solid black;
+		border: 2px inset black;
 		border-radius: 15px;
+		font-size: 120%;
 	}
 
 	td:hover {
 		color: blue;
 		background-color: grey;
-		border: 2px solid blue;
+		border: 2px dashed blue;
 	}
 
 	th:hover {
 		color: red;
-		border: 2px solid black;
+		border: 2px dashed black;
 		background-color: grey;
 	}
 	table.center {
@@ -67,44 +74,44 @@
 			<col style="background-color:yellow">
 		</colgroup>
 		<tr>
-			<th>No</th>
+			<th style="width:30px">No</th>
 			<th scope="col" style="height:100px">Oylar</th>
 			<th scope="col" style="height:100px">Har kun</th>
 			<th scope="col" style="height:100px">Oyliq maosh</th>
 		</tr>
 		<tr>
-			<td><b>1</td>
-			<td><b>January</td>
+			<td style="text-align: center;"><b>1</td>
+			<td style="font-size: 140%"><b>January</td>
 			<td>$100</td>
 			<td>$1000</td>
 		</tr>
 		<tr>
-			<td><b>2</td>
-			<td><b>February</td>
+			<td style="text-align: center;"><b>2</td>
+			<td style="font-size: 140%"><b>February</td>
 			<td>$80</td>
 			<td>$1500</td>
 		</tr>
 		<tr>
-			<td><b>3</td>
-			<td><b>Dekabr</td>
+			<td style="text-align: center;"><b>3</td>
+			<td style="font-size: 140%"><b>Dekabr</td>
 			<td>$10</td>
 			<td>$2200</td>
 		</tr>
 		<tr>
-			<td><b>4</td>
-			<td><b>Noyabr</td>
+			<td style="text-align: center;"><b>4</td>
+			<td style="font-size: 140%"><b>Noyabr</td>
 			<td>$100</td>
 			<td>$1000</td>
 		</tr>
 		<tr>
-			<td><b>5</td>
+			<td style="text-align: center;"><b>5</td>
 			<td><b>Oktiyabr</td>
 			<td>$80</td>
 			<td>$1500</td>
 		</tr>
 		<tr>
-			<td><b>6</td>
-			<td><b>Avgust</td>
+			<td style="text-align: center;"><b>6</td>
+			<td style="font-size: 140%"><b>Avgust</td>
 			<td>$10</td>
 			<td>$2200</td>
 		</tr>
@@ -113,7 +120,7 @@
 
 
 		<table style="width:700px">
-			<caption style="caption-side:bottom"><b>Aloqa<c/aption>
+			<caption style="caption-side:none"><b>Aloqa<c/aption>
 			<tr>
 				<th>Shohruh</th>
 				<th>Egamov
@@ -130,7 +137,7 @@
 			</tr>
 		</table>
 		<table style="width:700px">
-			<caption style="caption-side:bottom"><b>Bugalter nazorati bilan<c/aption>
+			<caption style="caption-side:none"><b>Bugalter nazorati bilan<c/aption>
 			<tr>
 				<th colspan="4">Toplam</th>
 			</tr>
