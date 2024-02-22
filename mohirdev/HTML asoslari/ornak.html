@@ -9,17 +9,19 @@
 <style>
 	table {
 		border: 5px solid blue;
+		margin: 100px;
 		background-color: width;
 		border-radius: 20px;
 		border-style: double;
 	}
 
-	th{
+	th {
 		padding: 10px;
 		border: 2px inset black;
 		border-radius: 15px;
 		font-size: 150%;
 	}
+
 	td {
 		padding: 10px;
 		border: 2px inset black;
@@ -38,32 +40,115 @@
 		border: 2px dashed black;
 		background-color: grey;
 	}
+
 	table.center {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	body{
+
+	body {
 		background-color: #B0C4DE;
-	}	
-	a{
-                border: 2px solid black; 
+	}
+
+	a {
+		border: 3px solid black;
 		padding: 5px;
 		text-decoration: none;
-		text-align:  center;
+		text-align: center;
 		color: black;
 		font-size: 20px;
-		border-radius: 10px;		
-}
-     	a:hover{
+		border-radius: 10px;
+		border-collapse: collapse;
+	}
+
+	a:hover {
 		background-color: grey;
 		color: blue;
-		border: 2px solid blue;	
-		}
+		border: 2px solid blue;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 5px;
+		padding: 5px;
+		overflow: hidden;
+	}
+
+	li {
+		float: inherit;
+		/* bu kantentlarni chap tarafda qoyadi */
+	}
+
+	li a {
+		display: block;
+		color: black;
+		text-align: center;
+		padding: 10px;
+		text-decoration: none;
+	}
+	hr {
+	border:1px solid black;
+	width:90%;
+}
+
+.malumotlar{
+margin: 0;
+padding: 5x;
+background-color: lightgray;
+}
+.malumotlar > h1, .yangi{
+margin: 20px;
+padding: 5px;
+}
+.yangi{
+background: white;
+}
+.yangi > h2, p {
+margin: 5px;
+font-size: 90%
+}
+.yangi:hover{
+		background-color: grey;
+		color: blue;
+		border: 2px solid blue;
+}
+
+aside{
+		widht: 30%;
+		padding-left: 50px;
+		margin-left: 50px;
+		float: right;
+		font-style: italic;
+		background-color: lightgray;
+		display: block;
+}
+
+aside:hover{
+		border: 2px dashed blue;
+}
+span {
+		color: blue;
+}
+span:hover{
+		border: 2px dashed green;
+}
+
+button{
+		padding: 10px;
+		border: 2px inset black;
+		border-radius: 10px;
+		font-size: 90%;	
+}
+button:hover {
+		background-color: grey;
+		color: blue;
+		border: 2px solid blue;
+}
 </style>
 </head>
 
 <body>
-
+	<button type="button" onclick="alert('Salom hali ishga tushmadi')"><b>Test</button>
 	<h1 style="text-align: center;">Oyliklar ro`yxati</h1>
 	<p style="text-align: center;">Bu ischilar oylik royxati:</p>
 
@@ -115,12 +200,14 @@
 			<td>$10</td>
 			<td>$2200</td>
 		</tr>
+		<hr>
 
 
-
+	</table>
 
 		<table style="width:700px">
-			<caption style="caption-side:none"><b>Aloqa<c/aption>
+<hr>
+			<caption style="caption-side:none"><b>Aloqa</caption>
 			<tr>
 				<th>Shohruh</th>
 				<th>Egamov
@@ -130,14 +217,14 @@
 			</tr>
 			<tr>
 				<th rowspan="2">Tel:</th>
-				<td>237-20-42</td>
+				<td id="contact">237-20-42</td>
 			</tr>
 			<tr>
 				<td>237-20-42</td>
 			</tr>
 		</table>
 		<table style="width:700px">
-			<caption style="caption-side:none"><b>Bugalter nazorati bilan<c/aption>
+			<caption style="caption-side:none"><b>Bugalter nazorati bilan</caption>
 			<tr>
 				<th colspan="4">Toplam</th>
 			</tr>
@@ -152,9 +239,82 @@
 				<th style="text-align:center" colspan="2">Toplam:</th>
 				<td style="text-align:center; background-color:yellow" colspan="2"><b>$ 9400<b></td>
 			</tr>
+<hr>
 		</table>
 	</table>
+<hr>
 
+	<h2>Boshliqlar ro`yxati.</h2>
+
+	<ul style="list-style-type: circle">
+		<li>Egamov Diyorbek</li>
+		<li>Egamov Bekmirza</li>
+		<li>Egamov Farrux</li>
+	</ul>
+
+	<ol type="I" start="1">
+		<li>Egamov Diyorbek</li>
+		<ul>
+			<li>1994-yil 14-aprel</li>
+		</ul>
+		<li>Egamov Bekmirza</li>
+		<ul>
+			<li>1996-yil 21-noyabr</li>
+		</ul>
+		<li>Egamov Farrux</li>
+		<ul>
+			<li>1998-yil 15-noyabr</li>
+		</ul>
+	</ol>
+
+	<dl>
+		<dt>Shohruh</dt>
+		<dd>-Bog`ot tumani</dd>
+		<dt>Diyorbek</dt>
+		<dd>-Toshkent viloyati</dd>
+	</dl>
+<hr>
+
+	<h2>Bu boshqa bolimlar</h2>
+	<p><b>Bu yerda malumotlarga javob olishingiz mumkin</p>
+	<dl>
+		<li><a href="kurs_txt.html" target="_blank">Uy</a></li>
+		<li><a href="#news">News</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</dl>
+<hr>
+
+
+<h1 id="news">Bu qisqa malumotlar</h1>
+
+<article class="malumotlar">
+<h1>Yangi malumotlar</h1> 
+    <article class="yangi">
+	<h1>Birinchi</h1>
+	<p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+    </article>
+    <article class="yangi">
+	<h1>Ikkinchi</h1>
+	<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!.</p>
+    </article>
+    <article class="yangi">
+	<h1>Uchinchi</h1>
+	<p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+    </article>
+</article>
+<div>
+<h1>Gazeta tipdagi matn</h1>
+
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+<aside>
+<p>The Epcot center is a theme park at <span><b>Walt Disney World</span> Resort featuring exciting attractions,<br> international pavilions, award-winning fireworks and <br>seasonal special events.</p>
+</aside>
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+</div>
+
+<div></div>
 </body>
 
 </html>

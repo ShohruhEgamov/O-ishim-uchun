@@ -229,3 +229,18 @@ th:hover {
 	background-color: black;
 
 }
+
+ul {
+	list-style-type:none;
+	overflov: hidden;
+	background-color: #00ff00;
+	color: blue;
+	padding: 20px 40px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+li{
+	float: left;
+}
