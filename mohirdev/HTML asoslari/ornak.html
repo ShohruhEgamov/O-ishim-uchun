@@ -10,7 +10,7 @@
 	table {
 		border: 5px solid blue;
 		margin: 100px;
-		background-color: width;
+		background-color: white;
 		border-radius: 20px;
 		border-style: double;
 	}
@@ -86,64 +86,119 @@
 		padding: 10px;
 		text-decoration: none;
 	}
-	hr {
-	border:1px solid black;
-	width:90%;
-}
 
-.malumotlar{
-margin: 0;
-padding: 5x;
-background-color: lightgray;
-}
-.malumotlar > h1, .yangi{
-margin: 20px;
-padding: 5px;
-}
-.yangi{
-background: white;
-}
-.yangi > h2, p {
-margin: 5px;
-font-size: 90%
-}
-.yangi:hover{
+	hr {
+		border: 1px solid black;
+		width: 90%;
+	}
+
+	.malumotlar {
+		margin: 0;
+		padding: 5x;
+		background-color: lightgray;
+	}
+
+	.malumotlar>h1,
+	.yangi {
+		margin: 20px;
+		padding: 5px;
+	}
+
+	.yangi {
+		background: white;
+	}
+
+	.yangi>h2,
+	p {
+		margin: 5px;
+		font-size: 90%
+	}
+
+	.yangi:hover {
 		background-color: grey;
 		color: blue;
 		border: 2px solid blue;
-}
+	}
 
-aside{
-		widht: 30%;
-		padding-left: 50px;
-		margin-left: 50px;
+	aside {
+		width: 30%;
+		padding-left: 40px;
+		margin-left: 30px;
 		float: right;
 		font-style: italic;
 		background-color: lightgray;
 		display: block;
-}
+	}
 
-aside:hover{
-		border: 2px dashed blue;
-}
-span {
+
+	aside:hover {
+		border: 2px solid blue;
+	}
+
+	span {
 		color: blue;
-}
-span:hover{
-		border: 2px dashed green;
-}
+	}
 
-button{
+	span:hover {
+		border: 2px dashed green;
+	}
+
+	button {
 		padding: 10px;
 		border: 2px inset black;
 		border-radius: 10px;
-		font-size: 90%;	
-}
-button:hover {
+		font-size: 90%;
+	}
+
+	button:hover {
 		background-color: grey;
 		color: blue;
 		border: 2px solid blue;
-}
+	}
+
+	.loyiha {
+		display: grid;
+		grid-template-columns: 33% 33% 33%
+	}
+
+	.loyiha>div {
+		float: left;
+		width: 33%;
+		display: grid;
+
+	}
+
+	div:hover {
+
+		border: 2px dashed blue;
+	}
+
+	.loyiha:hover {
+		border: 1px solid #B0C4DE;
+	}
+
+	.obunachi {
+		padding: 10px;
+		margin: 60px;
+	}
+
+	.gazeta {
+		margin: 10px;
+		padding: 10px;
+	}
+
+	#misol {
+		border: 1px solid black;
+		text-align: center;
+		background-color: grey;
+	}
+
+	figure {
+		border: 10px inset;
+		padding: 20px;
+		margin: auto;
+		border-color: white;
+	}
 </style>
 </head>
 
@@ -205,44 +260,44 @@ button:hover {
 
 	</table>
 
-		<table style="width:700px">
-<hr>
-			<caption style="caption-side:none"><b>Aloqa</caption>
-			<tr>
-				<th>Shohruh</th>
-				<th>Egamov
-			</tr>
-			<td>2000-yil</td>
-			<td>21-dekabr</td>
-			</tr>
-			<tr>
-				<th rowspan="2">Tel:</th>
-				<td id="contact">237-20-42</td>
-			</tr>
-			<tr>
-				<td>237-20-42</td>
-			</tr>
-		</table>
-		<table style="width:700px">
-			<caption style="caption-side:none"><b>Bugalter nazorati bilan</caption>
-			<tr>
-				<th colspan="4">Toplam</th>
-			</tr>
-			<tr>
-				<td style="text-align:center">Yil</td>
-				<td style="text-align:center">2000</td>
-				<td style="text-align:center">Kun</td>
-				<td style="text-align:center">21-dekabr</td>
-			</tr>
-
-			<tr>
-				<th style="text-align:center" colspan="2">Toplam:</th>
-				<td style="text-align:center; background-color:yellow" colspan="2"><b>$ 9400<b></td>
-			</tr>
-<hr>
-		</table>
+	<table style="width:700px">
+		<hr>
+		<caption style="caption-side:none"><b>Aloqa</caption>
+		<tr>
+			<th>Shohruh</th>
+			<th>Egamov
+		</tr>
+		<td>2000-yil</td>
+		<td>21-dekabr</td>
+		</tr>
+		<tr>
+			<th rowspan="2">Tel:</th>
+			<td id="contact">237-20-42</td>
+		</tr>
+		<tr>
+			<td>237-20-42</td>
+		</tr>
 	</table>
-<hr>
+	<table style="width:700px">
+		<caption style="caption-side:none"><b>Bugalter nazorati bilan</caption>
+		<tr>
+			<th colspan="4">Toplam</th>
+		</tr>
+		<tr>
+			<td style="text-align:center">Yil</td>
+			<td style="text-align:center">2000</td>
+			<td style="text-align:center">Kun</td>
+			<td style="text-align:center">21-dekabr</td>
+		</tr>
+
+		<tr>
+			<th style="text-align:center" colspan="2">Toplam:</th>
+			<td style="text-align:center; background-color:yellow" colspan="2"><b>$ 9400<b></td>
+		</tr>
+		<hr>
+	</table>
+	</table>
+	<hr>
 
 	<h2>Boshliqlar ro`yxati.</h2>
 
@@ -273,7 +328,7 @@ button:hover {
 		<dt>Diyorbek</dt>
 		<dd>-Toshkent viloyati</dd>
 	</dl>
-<hr>
+	<hr>
 
 	<h2>Bu boshqa bolimlar</h2>
 	<p><b>Bu yerda malumotlarga javob olishingiz mumkin</p>
@@ -282,39 +337,94 @@ button:hover {
 		<li><a href="#news">News</a></li>
 		<li><a href="#contact">Contact</a></li>
 	</dl>
-<hr>
+	<hr>
 
 
-<h1 id="news">Bu qisqa malumotlar</h1>
+	<h1 id="news">Bu qisqa malumotlar</h1>
 
-<article class="malumotlar">
-<h1>Yangi malumotlar</h1> 
-    <article class="yangi">
-	<h1>Birinchi</h1>
-	<p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
-    </article>
-    <article class="yangi">
-	<h1>Ikkinchi</h1>
-	<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!.</p>
-    </article>
-    <article class="yangi">
-	<h1>Uchinchi</h1>
-	<p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
-    </article>
-</article>
-<div>
-<h1>Gazeta tipdagi matn</h1>
+	<article class="malumotlar">
+		<h1>Yangi malumotlar</h1>
+		<article class="yangi">
+			<h1>Birinchi</h1>
+			<p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most
+				popular web browser since January, 2018.</p>
+		</article>
+		<article class="yangi">
+			<h1>Ikkinchi</h1>
+			<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular
+				web browser today!.</p>
+		</article>
+		<article class="yangi">
+			<h1>Uchinchi</h1>
+			<p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced
+				Internet Explorer.</p>
+		</article>
+	</article>
+	<div class="gazeta">
 
-<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
 
-<aside>
-<p>The Epcot center is a theme park at <span><b>Walt Disney World</span> Resort featuring exciting attractions,<br> international pavilions, award-winning fireworks and <br>seasonal special events.</p>
-</aside>
-<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-</div>
 
-<div></div>
+		<h1>Gazeta tipdagi matn</h1>
+
+		<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a
+			great summer together with my family!</p>
+
+		<aside>
+			<p>The Epcot center is a theme park at <span><b>Walt Disney World</span> Resort featuring exciting
+				attractions,<br> international pavilions, award-winning fireworks and <br>seasonal special events.</p>
+		</aside>
+		<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a
+			great summer together with my family!</p>
+		<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a
+			great summer together with my family!</p>
+	</div>
+
+	<div class="obunachi" style="background-color: #D9EEE1">
+		<h1>Salom mening obunachilarim</h1>
+		<p>Men Xorazm viloyatida</p>
+		<p>Bog`ot tumanida tugilganman</p>
+	</div>
+
+
+
+	<h1>Yangi loyiha</h1>
+
+	<div class="loyiha">
+		<div style="background-color: #FFF4A3;">
+			<h2>Tashkent</h2>
+			<p>Bu o`zbekistonning poyitaxti</p>
+		</div>
+
+		<div style="background-color: #FFC0C7;">
+			<h2>Xorazm</h2>
+			<p>Bu o`zbekistonning yuragi</p>
+		</div>
+
+		<div style="background-color: #D9EEE1;">
+			<h2>Andijon</h2>
+			<p>Bu o`zbekistonning sanoat rivojlangan shaxri</p>
+		</div>
+	</div>
+
+	<h2> Bu ID haqidagi kurs</h2>
+	<p>Bu yerda ID ni ishlatish uchun biron soz oldiga # qoyib<br>
+		ID = "so`z kiritiladi"</p>
+
+	<h1 id="misol">Bu misol</h1>
+
+	<h1>HTML Iframes</h1>
+	<p>
+		bu esa boshqa saytni bu yerda kichik qilib korssatish uchun
+	</p>
+	<figure>
+		<iframe src="shoh.html" height="200" width="100%" title="boshqa sayt"></iframe>
+	</figure>
+
+	<figure>
+		<iframe src="shoh.html" name="yangisayt" height="300px" width="100%" title="boshqa sayt"></iframe>
+
+		<p><a href="kurs.css" target="yangisayt">Bosh sahifani css kodlari</a></p>
+	</figure>
 </body>
 
 </html>
