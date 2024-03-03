@@ -42,7 +42,7 @@
 		background-color: grey;
 	}
 
-	table.center {
+	table.center { 
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -322,7 +322,7 @@ fieldset{
 		<caption style="caption-side:none"><b>Aloqa</caption>
 		<tr>
 			<th>Shohruh</th>
-			<th>Egamov
+			<th>Egamov</th>
 		</tr>
 		<td>2000-yil</td>
 		<td>21-dekabr</td>
@@ -603,7 +603,8 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";
 </form>
 
 <form>
-<textarea name="message" rows="10" cols="160">Yozing: </textarea>
+<textarea name="message" rows="10" cols="160" placeholder="Yozing">
+Siz haqingizda</textarea>
 </form>
 </fieldset>
 
@@ -647,6 +648,38 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";
 <input type="tel" id="tel" name="tel" placeholder="123-45-67" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
 </form>
 
-</body>
 
+<convas id="namuna" width="200" heigth="100" style="border:1px solid #000000;">
+Mening birinchi convasim
+</convas>
+
+<svg width="100" height="100">
+	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="5" fill="yellow" />
+</svg>
+
+<svg width="400" height="120">
+	<rect x="10" y="10" width="200" height="100" stroke="red" stroke-width="6" fill="blue"/>
+</svg>
+
+<svg width="400" height="120">
+	<rect x="10" y="10" rx="10" ry="10" width="200" height="100" stroke="red" stroke-width="6" fill="blue"/>
+</svg>
+
+
+<svg width="300" height="200">
+	<polygon points="100,10 40,198 190,78 10,78 160,198" 
+style="fill:lime; stroke:purple"; stroke-width:10; fill-rule:evenodd;" />
+</svg><br>
+
+<hr>
+
+<label for="birinchi">Korsatgichlar</label>
+<meter id="birinchi" min="0" low="50" high="80" max="100" value="75"></meter>
+
+<label for="ikkinchi">Korsatgichlar 2</label>
+<meter id="ikkinchi" value="0.3" high="0.9" low="0.1" optimum="0.5"></meter>
+
+
+
+</body>
 </html>
