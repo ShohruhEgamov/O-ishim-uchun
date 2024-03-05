@@ -392,7 +392,7 @@ fieldset{
 	<dl>
 		<li><a href="kurs_txt.html" target="_blank">Uy</a></li>
 		<li><a href="#news">News</a></li>
-		<li><a href="#contact">Contact</a></li>
+		<li><a href="#contact" accesskey="t">Contact</a></li>
 	</dl>
 	<hr>
 
@@ -682,5 +682,28 @@ style="fill:lime; stroke:purple"; stroke-width:10; fill-rule:evenodd;" />
 <label for="ikkinchi">Korsatgichlar 2</label>
 <meter id="ikkinchi" value="0.3" high="0.9" low="0.1" optimum="0.5"></meter>
 
-</body>
+<form
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+<input type="range" id="a" value="50"></input>
++<input type="range" id="b" value="25"></input>
+=<output name="x" for="a b"></output>
+</form>
+
+<ruby>
+D <rp>(</rp><rt>d</rt><rp>)</rp>
+</ruby>
+
+<form>
+  <label for="cars">Moshinalar</label>
+  <select name="cars" id="cars" size="1"multiple required>
+    <option value="">None</option>
+    <option value="volvo">Volvo</option>
+    <option value="bmw">BMW</option>
+    <option value="mers">Mersides benz</option>
+    <option value="lambo">Lamborgini</option>
+    <option value="ferr">Ferrari</option>
+  </select>
+</form>
+
+</body> 
 </html>
