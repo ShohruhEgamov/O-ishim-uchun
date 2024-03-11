@@ -1,0 +1,41 @@
+
+/*Bu loyihaning css qismi*/
+
+*{
+	color: black;
+}
+
+body{
+	background-color: rgba(15, 25, 30, 0);
+}
+
+p.center{
+	color: black;
+	border-top-style: dotted;
+	border-left-style: solid;
+	border-bottom-style:dotted;
+	border-right-style: solid;
+}
+
+p.center:hover{
+	background-color: blue;
+}
+
+p{
+	color: blue;
+}
+
+p.lerge{
+	font-size: 300%
+}
+
+#gard{  
+	height: 200px;
+	background-image: linear-gradient(to top right, red, blue);
+	border-radius: 15px;
+}
+
+p.ex1{
+	max-width: 500px;
+	border;
+}
