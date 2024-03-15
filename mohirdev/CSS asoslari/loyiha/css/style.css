@@ -15,18 +15,26 @@ p.center{
 	border-left-style: solid;
 	border-bottom-style:dotted;
 	border-right-style: solid;
+	
 }
 
 p.center:hover{
 	background-color: blue;
+	font-variant: small-caps;
 }
 
 p{
 	color: blue;
 }
 
+.ismim{
+	font-family: "Sofia", sans-serif;
+        font-family: "Audiowide", sans-serif;
+}
+
 p.lerge{
 	font-size: 300%
+
 }
 
 #gard{  
@@ -37,5 +45,15 @@ p.lerge{
 
 p.ex1{
 	max-width: 500px;
-	border;
+	border: 2px solid black;
+	outline: black solid 10px;
+	margin: auto;
+	font-weight: 900;
+}
+p.ex1:hover{
+	outline: blue solid 10px;
+	font-weight: 900;
+}
+p.c{
+	text-align-last: justify;
 }
