@@ -289,8 +289,8 @@ class Car:
       self.brand = brand
       self.model = model
 
-    def move(self):
-    	print("Drive!")
+    # def move(self):
+    # 	print("Drive!")
 
 
 class Boat:
@@ -504,11 +504,11 @@ try:
 except:
 	print("yoiq bu yerda")
 
-x = -1
-f x < 0:
-	raise Exception("Kechrasiz bu hato")
-else:
-	print("ha katta")
+# x = -1
+# f x < 0:
+# 	raise Exception("Kechrasiz bu hato")
+# else:
+# 	print("ha katta")
 
 x = "hello"
 if not type(x) is int:
