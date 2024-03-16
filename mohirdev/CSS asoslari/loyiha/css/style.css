@@ -1,59 +1,157 @@
-
 /*Bu loyihaning css qismi*/
 
-*{
+* {
 	color: black;
 }
 
-body{
+body {
 	background-color: rgba(15, 25, 30, 0);
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-p.center{
+p.center {
 	color: black;
 	border-top-style: dotted;
 	border-left-style: solid;
-	border-bottom-style:dotted;
+	border-bottom-style: dotted;
 	border-right-style: solid;
-	
+
 }
 
-p.center:hover{
+p.center:hover {
 	background-color: blue;
-	font-variant: small-caps;
+	font-variant: normal;
 }
 
-p{
+p {
 	color: blue;
 }
 
-.ismim{
+.ismim {
 	font-family: "Sofia", sans-serif;
-        font-family: "Audiowide", sans-serif;
+	font-family: "Audiowide", sans-serif;
 }
 
-p.lerge{
-	font-size: 300%
-
+p.lerge {
+	font-size: 300%;
 }
 
-#gard{  
+#gard {
 	height: 200px;
 	background-image: linear-gradient(to top right, red, blue);
 	border-radius: 15px;
 }
 
-p.ex1{
+p.ex1 {
 	max-width: 500px;
+	height: 70px;
 	border: 2px solid black;
 	outline: black solid 10px;
 	margin: auto;
 	font-weight: 900;
+	overflow: auto;
 }
-p.ex1:hover{
+
+p.ex1:hover {
 	outline: blue solid 10px;
 	font-weight: 900;
 }
-p.c{
+
+p.c {
 	text-align-last: justify;
+}
+
+ul {
+	list-style-image: url(favicon\ \(5\).ico);
+	list-style-type: none;
+	border-left: 5px solid blue;
+	border-right: 5px solid blue;
+	border-bottom: 1px solid blue;
+	border-top: 1px solid blue;
+	border-radius: 5px;
+}
+
+li:hover {
+	background: skyblue;
+	border-radius: 5px;
+}
+
+ul:hover {
+	background: gold;
+	border-radius: 5px;
+}
+
+#ismlar {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 30px;
+	empty-cells: hide;
+}
+
+#ismlar td,
+#ismlar th {
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+
+#ismlar tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+#ismlar tr:hover {
+	background-color: #ddd;
+}
+
+#ismlar th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #04aa6d;
+	color: white;
+}
+
+#ismlar td:hover {
+	border: 2px dotted black;
+}
+
+.yopishgan {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	padding: 5px;
+	background-color: #04aa6d;
+	border: 2px solid #04aa6d;
+}
+
+.conteyner {
+	position: relative;
+}
+
+.rasm1 {
+	width: 100%;
+	height: auto;
+	opacity: 0.1;
+}
+
+.birinchi {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: black;
+	font-size: 18px;
+}
+
+.ikkinchi {
+	position: absolute;
+	top: 10px;
+	left: 16px;
+}
+
+.rasm2 {
+	position: absolute;
+	left: 0px;
+	top: 100%;
+	z-index: -2;
 }
