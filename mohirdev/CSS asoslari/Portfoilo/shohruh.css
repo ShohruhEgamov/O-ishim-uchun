@@ -1,11 +1,29 @@
+/* Asosiy styllar */
 body {
 	font-family: sans-serif;
 }
 
+.container {
+	width: 1140;
+	margin: 0 auto;
+}
+
 .main-header__brend img {
 	width: 25px;
+	display: inline-block;
 }
-.main-header__brend{
+
+
+.katta_hariflar {
+	text-transform: uppercase;
+}
+
+.clearfix {
+	clear: both;
+}
+
+/* Sahivha qismi styllar*/
+.main-header__brend {
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -25,7 +43,7 @@ body {
 	color: #05364d;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 18px;
 	font-weight: 500;
 }
 
@@ -33,11 +51,97 @@ body {
 	color: #efb6df;
 }
 
-.main-navigatorlar.active a{
+.main-navigatorlar.active a {
 	color: #efb6df;
 }
 
-.container {
-	width: 1140;
-	margin: 0 auto;
+
+/* Asosiy qisim styllar */
+.asosiy_qisim {
+	padding: 100px 30px;
+}
+
+.asosiy_qisim>div {
+	width: 50%;
+	float: left;
+}
+
+.asosiy_qisim__rasm {
+	text-align: right;
+}
+
+.asosiy_qisim__salom {
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
+	color: #797979;
+}
+
+.asosiy_qisim__ozim {
+	font-size: 60px;
+	font-weight: 5800;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #05364e;
+}
+
+.asosiy_qisim__kasbim {
+	font-size: 24px;
+	font-weight: 300;
+	margin-bottom: 20px;
+	color: #05364e;
+}
+
+.asosiy_qisim__korish {
+	margin-top: 30px;
+	border: none;
+	background-color: blue;
+	color: white;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 20px 40px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+/* Statistika */
+
+.statistika {
+	padding-top: 100px;
+	float: left;
+}
+
+.statistika__malumot {
+	display: inline-block;
+	background-color: #f8faff;
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-right: 20px;
+	width: 150px;
+}
+
+.statistika__raqam {
+	font-size: 27px;
+	margin-bottom: 5px;
+	color: #1c44e4;
+}
+
+.statistika__haqida {
+	font-size: 16px;
+	color: #797979;
+	font-weight: 300;
+}
+
+.asosiy-qisim__icon a {
+	color: #8fa1aa;
+	font-size: 20px;
+	display: inline-block;
+	margin-right: 16px;
+	cursor: pointer;
+}
+
+.asosiy-qisim__icon a:hover i {
+	color: #1c44e4;
 }
