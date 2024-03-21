@@ -1,0 +1,43 @@
+body {
+	font-family: sans-serif;
+}
+
+.main-header__brend img {
+	width: 25px;
+}
+.main-header__brend{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.main-navigator {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.main-navigatorlar {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+.main-navigatorlar a {
+	color: #05364d;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.main-navigatorlar a:hover {
+	color: #efb6df;
+}
+
+.main-navigatorlar.active a{
+	color: #efb6df;
+}
+
+.container {
+	width: 1140;
+	margin: 0 auto;
+}

@@ -155,3 +155,152 @@ ul:hover {
 	top: 100%;
 	z-index: -2;
 }
+
+.floatd {
+	border: 3px solid blue;
+	padding: 5px;
+	overflow: auto;
+}
+
+.rasm4 {
+	float: right;
+
+}
+
+/* * {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.header {
+	background-color: #2196F3;
+	color: white;
+	text-align: center;
+	padding: 15px;
+}
+
+.footer {
+	background-color: #444;
+	color: white;
+	padding: 15px;
+}
+
+.birinchi_menyu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #777;
+}
+
+.birinchi_menyu {
+	float: left;
+}
+
+.birinchi_menyu a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 16px;
+	text-decoration: none;
+}
+
+.birinchi_menyu a:hover {
+	background-color: #222;
+}
+
+.birinchi_menyu li a.active {
+	color: white;
+	background-color: #4CAF50;
+}
+
+.pastki {
+	float: left;
+}
+
+.ikkinchi_menyu {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.asosiy {
+	width: 25%;
+} */
+
+/* .content {
+	width: 75%;
+}
+
+.asosiy ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.asosiy li a {
+	margin-bottom: 4px;
+	display: block;
+	padding: 8px;
+	background-color: #eee;
+	text-decoration: none;
+	color: #666;
+}
+
+.asosiy li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+.asosiy li a.active {
+	background-color: #008CBA;
+	color: white;
+} */
+
+span.a {
+	display: inline;
+	width: 50px;
+	height: 50px;
+	padding: 1px;
+	border: 1px solid blue;
+	background-color: yellow;
+}
+
+span.b {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+	border: 1px solid blue;
+	background-color: yellow;
+
+}
+
+span.c {
+	display: block;
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+	border: 1px solid blue;
+	background-color: yellow;
+
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.right {
+	position: absolute;
+	right: 0px;
+	width: 300px;
+	border: 3px solid green;
+	padding: 10px;
+}
+
+.aaa {}
