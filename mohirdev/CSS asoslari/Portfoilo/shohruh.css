@@ -51,7 +51,7 @@ body {
 	color: #efb6df;
 }
 
-.main-navigatorlar.active a {
+.main-navigatorlar a:active {
 	color: #efb6df;
 }
 
@@ -95,14 +95,6 @@ body {
 
 .asosiy_qisim__korish {
 	margin-top: 30px;
-	border: none;
-	background-color: blue;
-	color: white;
-	font-size: 15px;
-	font-weight: 500;
-	padding: 20px 40px;
-	cursor: pointer;
-	border-radius: 5px;
 }
 
 .asosiy-qisim__icon a {
@@ -121,7 +113,6 @@ body {
 
 .statistika {
 	padding-top: 100px;
-	float: left;
 }
 
 .statistika__malumot {
@@ -132,6 +123,7 @@ body {
 	border-radius: 5px;
 	margin-right: 20px;
 	width: 150px;
+	border: 1px solid white;
 }
 
 .statistika__raqam {
@@ -144,4 +136,179 @@ body {
 	font-size: 16px;
 	color: #797979;
 	font-weight: 300;
+}
+
+/* Men haqimda */
+
+.men_haqimda {
+	padding: 100px 0;
+}
+
+.men_haqimda>div {
+	width: 50%;
+	float: left;
+}
+
+.men_haqimda__images img {
+	width: 70%;
+}
+
+.maqola-matni {
+	letter-spacing: 2px;
+	font-weight: 500;
+	margin-bottom: 10px;
+	color: #797979;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.maqola-satri {
+	margin-top: 5px;
+	font-size: 42px;
+	font-weight: 700;
+	text-transform: capitalize;
+	color: #05364d;
+}
+
+.men_haqimda__maqola {
+	font-size: 20px;
+	font-weight: 300;
+	color: #797979;
+	line-height: 27px;
+}
+
+.buttom {
+	border: none;
+	background-color: blue;
+	color: white;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 20px 40px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.blur-line {
+	display: inline-block;
+	margin-left: 5px;
+	width: 80px;
+	height: 4px;
+	background-color: rgba(237, 35, 159, 0.6);
+	filter: blur(4px);
+	border-radius: 4px;
+}
+
+.men_haqimda__korish {
+	margin-top: 40px;
+}
+
+/* Xizmatlar */
+
+.xizmatlar {
+	padding-top: 100px;
+}
+
+.servis-card {
+	display: inline-block;
+	width: 30%;
+	padding: 60px 30px;
+	background-color: #f8faff;
+	margin-right: 3%;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.servis-card:hover {
+	background-color: #5f30ff;
+}
+
+.servis-card:hover .servis-card__matn,
+.servis-card:hover .servis-card__malumot,
+.servis-card:hover .servis-card__link {
+	color: white;
+}
+
+.servis-card__matn {
+	color: #05364d;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+
+.servis-card__malumot {
+	font-size: 20px;
+	line-height: 27px;
+	font-weight: 300;
+	color: #797979;
+}
+
+.servis-card__link {
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #05364d;
+	text-decoration: none;
+}
+
+.servis-card img {
+	width: 25%;
+}
+
+/* Mijozlar fikri */
+
+.mijozlar {
+	padding-top: 100px;
+}
+
+.mijoz-haqida>div {
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.mijoz-haqida__malumot {
+	padding-top: 50px;
+	padding-left: 50px;
+
+}
+
+.mijoz-haqida__rasm img {
+	width: 100%;
+}
+
+.mijoz-haqida__ismi {
+	font-size: 20px;
+	margin-bottom: 4px;
+}
+
+.mijoz-haqida__pazitsion {
+	font-size: 14px;
+	font-weight: 300;
+	color: #5b6d75;
+}
+
+.mijoz-haqida__haqimda {
+	font-size: 14px;
+	line-height: 27px;
+	font-weight: 300;
+	color: #5b6d75;
+}
+
+.mijoz-haqida__reyt {
+	color: #ffd805;
+}
+
+.statistika__malumot:hover {
+	border: 1px solid blue;
+}
+
+.yopishgan {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	padding: 1px;
+	background-color: #f8faff;
+	border-radius: 10px;
+	text-align: center;
 }
