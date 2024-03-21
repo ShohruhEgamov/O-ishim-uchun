@@ -105,6 +105,18 @@ body {
 	border-radius: 5px;
 }
 
+.asosiy-qisim__icon a {
+	color: #8fa1aa;
+	font-size: 20px;
+	display: inline-block;
+	margin-right: 16px;
+	cursor: pointer;
+}
+
+.asosiy-qisim__icon a:hover i {
+	color: #1c44e4;
+}
+
 /* Statistika */
 
 .statistika {
@@ -132,16 +144,4 @@ body {
 	font-size: 16px;
 	color: #797979;
 	font-weight: 300;
-}
-
-.asosiy-qisim__icon a {
-	color: #8fa1aa;
-	font-size: 20px;
-	display: inline-block;
-	margin-right: 16px;
-	cursor: pointer;
-}
-
-.asosiy-qisim__icon a:hover i {
-	color: #1c44e4;
 }
