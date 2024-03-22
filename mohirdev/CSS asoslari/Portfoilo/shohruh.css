@@ -22,7 +22,32 @@ body {
 	clear: both;
 }
 
+.blur-line {
+	display: inline-block;
+	margin-left: 5px;
+	position: relative;
+	top: -2px;
+	width: 80px;
+	height: 4px;
+	background-color: rgba(237, 35, 159, 0.6);
+	filter: blur(4px);
+	border-radius: 4px;
+}
+
 /* Sahivha qismi styllar*/
+
+.yopishgan {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	padding: 0px;
+	background-color: #ffff;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0px 0px 5px 2px #8fa1aa;
+	z-index: 10;
+}
+
 .main-header__brend {
 	display: inline-block;
 	vertical-align: middle;
@@ -187,15 +212,6 @@ body {
 	border-radius: 5px;
 }
 
-.blur-line {
-	display: inline-block;
-	margin-left: 5px;
-	width: 80px;
-	height: 4px;
-	background-color: rgba(237, 35, 159, 0.6);
-	filter: blur(4px);
-	border-radius: 4px;
-}
 
 .men_haqimda__korish {
 	margin-top: 40px;
@@ -215,10 +231,12 @@ body {
 	margin-right: 3%;
 	text-align: center;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 .servis-card:hover {
 	background-color: #5f30ff;
+	box-shadow: 0px 0px 10px 5px #8fa1aa;
 }
 
 .servis-card:hover .servis-card__matn,
@@ -300,14 +318,112 @@ body {
 
 .statistika__malumot:hover {
 	border: 1px solid blue;
+	box-shadow: 0px 0px 5px 2px #8fa1aa;
 }
 
-.yopishgan {
-	position: -webkit-sticky;
-	position: sticky;
+/* Portfoilo */
+
+.portfolio {
+	padding: 100px 0;
+}
+
+.portfolio-items {
+	margin-top: 50px;
+	position: relative;
+
+}
+
+.portfolio-item {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	padding: 10px;
+	box-sizing: border-box;
+	z-index: 3;
+	cursor: pointer;
+}
+
+.port-item-1 {
+	padding-left: 0;
+}
+
+.port-item-2 {
+	position: absolute;
 	top: 0;
-	padding: 1px;
-	background-color: #f8faff;
-	border-radius: 10px;
-	text-align: center;
+	right: 0;
+	z-index: 2;
+}
+
+.port-item-3 {
+	position: absolute;
+	top: 460px;
+	right: 0;
+	z-index: 1;
+}
+
+
+.portfolio-matn {
+	font-size: 14px;
+	font-weight: 300;
+	color: #5b6d75;
+}
+
+
+.portfolio-item__images {
+	box-shadow: 0px 0px 5px 2px #8fa1aa;
+	width: 100%;
+}
+
+.portfolio-item__overlay {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(19, 69, 230, 0.9);
+	visibility: hidden;
+}
+
+.portfolio-item__info {
+	position: absolute;
+	bottom: 44px;
+	left: 80px;
+	color: white;
+	visibility: hidden;
+}
+
+.portfolio-item__info a {
+	color: white;
+	text-decoration: none;
+}
+
+.portfolio-item:hover .portfolio-item__overlay {
+	visibility: visible;
+	top: 20px;
+	left: 20px;
+}
+
+.portfolio-item:hover .portfolio-item__info {
+	visibility: visible;
+	bottom: 24px;
+	left: 60px;
+}
+
+.portfolio-filter {
+	list-style: none;
+	padding-left: 0;
+}
+
+.portfolio-filter li {
+	margin-top: 50px;
+	display: inline-block;
+	margin-right: 40px;
+	font-size: 17px;
+	font-weight: 400;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.portfolio-filter li:hover {
+	color: #1c44e4;
 }
