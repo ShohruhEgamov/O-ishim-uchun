@@ -3,6 +3,11 @@ body {
 	font-family: sans-serif;
 }
 
+::selection {
+	color: red;
+	background: black;
+}
+
 .container {
 	width: 1140px;
 	margin: 0 auto;
@@ -72,6 +77,67 @@ body {
 	font-weight: 500;
 }
 
+.ikkilamchi {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+.ikkilamchi a {
+	color: #05364d;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+li.ikkilamchi {
+	display: inline-block;
+}
+
+.ikkilamchi-ikki {
+	color: #05364d;
+	display: none;
+	position: absolute;
+	background-color: #ffff;
+	min-width: 100px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	border-radius: 10px;
+}
+
+.ikkilamchi-ikki a {
+	color: #05364d;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.ikkilamchi-ikki a:hover {
+	background-color: #f1f1f1;
+}
+
+.ikkilamchi:hover .ikkilamchi-ikki {
+	display: block;
+}
+
+.main-navigatorlar a:link {
+	color: #05364d;
+}
+
+.ikkilamchi-ikki a:hover {
+	color: #efb6df;
+}
+
+.ikkilamchi a:hover {
+	color: #efb6df;
+}
+
+/* .main-navigatorlar a:visited {
+	color: blue;
+} */
+
 .main-navigatorlar a:hover {
 	color: #efb6df;
 }
@@ -79,7 +145,6 @@ body {
 .main-navigatorlar a:active {
 	color: #efb6df;
 }
-
 
 /* Asosiy qisim styllar */
 .asosiy_qisim {
@@ -93,6 +158,31 @@ body {
 
 .asosiy_qisim__rasm {
 	text-align: right;
+}
+
+#birinchisi {
+	position: absolute;
+	display: block;
+}
+
+#rasm1 {
+	width: 578px;
+	height: 554px;
+}
+
+#ikkinchisi {
+	position: absolute;
+	display: none;
+}
+
+.asosiy_qisim__rasm:hover #ikkinchisi {
+	display: block;
+	width: 100px;
+	height: 100px;
+}
+
+.asosiy_qisim__rasm:hover #birinchisi {
+	display: none;
 }
 
 .asosiy_qisim__salom {
@@ -137,7 +227,8 @@ body {
 /* Statistika */
 
 .statistika {
-	padding-top: 100px;
+	padding-top: 300px;
+	cursor: -webkit-grab;
 }
 
 .statistika__malumot {
@@ -380,7 +471,7 @@ body {
 	top: 0px;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(19, 69, 230, 0.9);
+	background-color: rgba(19, 69, 230, 0.7);
 	visibility: hidden;
 }
 
