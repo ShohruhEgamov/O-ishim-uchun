@@ -7,7 +7,10 @@
 	<title>Document</title>
 </head>
 <style>
+	/*																	Bu ikki rasimni bir joyda korsatish */
+
 	#navlist {
+		padding-top: 1000px;
 		position: relative;
 	}
 
@@ -35,6 +38,10 @@
 		background: url(images/img_21.png)-740px 0;
 	}
 
+
+
+	/*																	Bu sanashni amalga oshirish uchun */
+
 	div {
 		counter-reset: section;
 	}
@@ -52,30 +59,176 @@
 		counter-increment: subsection;
 		content: counter(section) "." counter(subsection) " ";
 	}
+
+
+
+
+	/*																		bu parspective hususuyati haqida */
+
+	.ex1 {
+		padding-top: 100px;
+		perspective: 1000px;
+	}
+
+	.cub {
+		font-size: 4em;
+		width: 2em;
+		margin: 10px auto;
+		transform-style: preserve-3d;
+		transform: rotateX(-45deg) rotateY(30deg);
+	}
+
+	.side {
+		position: absolute;
+		width: 2em;
+		height: 2em;
+		background-color: rgba(100, 100, 100, 0.5);
+		border: 1px solid red;
+		text-align: center;
+		line-height: 2em;
+		transition: transform 2s;
+	}
+
+	.oldi {
+		transform: translateZ(1em);
+	}
+
+	.yuqori {
+		transform: rotateX(90deg) translateZ(1em);
+		visibility: visible;
+	}
+
+	.chap {
+		transform: rotateY(90deg) translateZ(1em);
+	}
+
+	.ong {
+		transform: rotateX(-90deg) translateZ(1em);
+	}
+
+	.past {
+		transform: rotateY(-90deg) translateZ(1em);
+	}
+
+	.orqasi {
+		transform: rotateX(180deg) translateZ(1em);
+	}
+
+	.oldi:hover {
+		transform: translateZ(1.5em);
+		background-color: rgba(46, 28, 255, 0.5);
+		transform: rotate(180deg) translateZ(-1em);
+
+	}
+
+
+	.yuqori:hover {
+		transform: rotateX(90deg) translateZ(1.5em);
+		background-color: rgba(46, 28, 255, 0.5);
+		transform: rotate(180deg) translateZ(1em);
+	}
+
+	.past:hover {
+		transform: rotateY(-90deg) translateZ(1.5em);
+		background-color: rgba(46, 28, 255, 0.5);
+		transform: rotateY(180deg) translateZ(1em);
+
+	}
+
+	/*																		bu animatsiya hususuyati haqida */
+
+	.animatsiya {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: relative;
+		animation-name: example;
+		animation-duration: 5s;
+	}
+
+	@keyframes example {
+		0% {
+			background-color: red;
+			left: 0px;
+			top: 0px;
+		}
+
+		25% {
+			background-color: yellow;
+			left: 200px;
+			top: 0px;
+		}
+
+		50% {
+			background-color: blue;
+			left: 200px;
+			top: 200px;
+		}
+
+		75% {
+			background-color: green;
+			left: 0px;
+			top: 200px;
+		}
+
+		100% {
+			background-color: red;
+			left: 0px;
+			top: 0px;
+		}
+	}
 </style>
 
 <body>
-	<!-- <ul id="navlist">
-		<li id="home"> <a href="images/img_21.png"></a></li>
-	</ul> -->
+	<!--																	Bu ikki rasimni bir joyda korsatish -->
 
 	<div>
-		<h1>HTML/CSS Tutorials</h1>
-		<h2>HTML</h2>
-		<h2>CSS</h2>
-		<h2>Bootstrap</h2>
-		<h2>W3.CSS</h2>
-
-		<h1>Scripting Tutorials</h1>
-		<h2>JavaScript</h2>
-		<h2>jQuery</h2>
-		<h2>React</h2>
-
-		<h1>Programming Tutorials</h1>
-		<h2>Python</h2>
-		<h2>Java</h2>
-		<h2>C++</h2>
+		<ul id="navlist">
+			<li id="home"> <a href="images/img_21.png"></a></li>
+		</ul>
 	</div>
+
+	<!--																	Bu sanashni amalga oshirish uchun -->
+	<div>
+		<div>
+			<h1>HTML/CSS Tutorials</h1>
+			<h2>HTML</h2>
+			<h2>CSS</h2>
+			<h2>Bootstrap</h2>
+			<h2>W3.CSS</h2>
+
+			<h1>Scripting Tutorials</h1>
+			<h2>JavaScript</h2>
+			<h2>jQuery</h2>
+			<h2>React</h2>
+
+			<h1>Programming Tutorials</h1>
+			<h2>Python</h2>
+			<h2>Java</h2>
+			<h2>C++</h2>
+		</div>
+	</div>
+
+
+
+
+	<!--																		bu parspective hususuyati haqida -->
+
+	<div>
+		<div class="ex1">
+			<div class="cub">
+				<div class="side oldi">1</div>
+				<div class="side orqasi">6</div>
+				<div class="side chap">5</div>
+				<div class="side ong">4</div>
+				<div class="side past">2</div>
+				<div class="side yuqori">3</div>
+			</div>
+		</div>
+	</div>
+
+	<!--																		bu animatsiya hususuyati haqida -->
+	<div class="animatsiya"></div>
 </body>
 
 </html>

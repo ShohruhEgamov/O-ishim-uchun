@@ -201,6 +201,10 @@ li.ikkilamchi {
 	color: #05364e;
 }
 
+.asosiy_qisim__ozim:hover {
+	text-shadow: 0px 0px 20px blue, -1px 0px 0px red, 1px 0px 0px red, 0px 1px 0px red, 0px -1px 0px red;
+}
+
 .asosiy_qisim__kasbim {
 	font-size: 24px;
 	font-weight: 300;
@@ -229,6 +233,7 @@ li.ikkilamchi {
 .statistika {
 	padding-top: 300px;
 	cursor: -webkit-grab;
+
 }
 
 .statistika__malumot {
@@ -239,6 +244,9 @@ li.ikkilamchi {
 	margin-right: 20px;
 	width: 150px;
 	border: 1px solid white;
+	position: relative;
+	animation-name: example;
+	animation-duration: 5s;
 }
 
 .statistika__raqam {
@@ -492,6 +500,8 @@ li.ikkilamchi {
 	visibility: visible;
 	top: 20px;
 	left: 20px;
+	transition: 1s;
+	transition-delay: 0.2s;
 }
 
 .portfolio-item:hover .portfolio-item__info {
@@ -517,4 +527,26 @@ li.ikkilamchi {
 
 .portfolio-filter li:hover {
 	color: #1c44e4;
+}
+
+@keyframes example {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+
+	50% {
+		left: 200px;
+		top: 0px;
+	}
+
+	75% {
+		left: 100px;
+		top: 0px;
+	}
+
+	100% {
+		left: 0px;
+		top: 0px;
+	}
 }

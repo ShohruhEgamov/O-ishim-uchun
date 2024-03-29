@@ -558,7 +558,7 @@ s = a * b
 if c ==s:
 	print("bu togri ")
 else:
-	("notogri")
+	print("notogri")
 
 
 
