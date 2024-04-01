@@ -302,13 +302,17 @@ li.ikkilamchi {
 
 .buttom {
 	border: none;
-	background-color: blue;
+	background-image: linear-gradient(to right, blue, red);
 	color: white;
 	font-size: 15px;
 	font-weight: 500;
 	padding: 20px 40px;
 	cursor: pointer;
 	border-radius: 5px;
+}
+
+.buttom:hover {
+	background-image: linear-gradient(to left, blue, red);
 }
 
 
@@ -473,6 +477,7 @@ li.ikkilamchi {
 	width: 100%;
 }
 
+
 .portfolio-item__overlay {
 	position: absolute;
 	left: 0px;
@@ -532,21 +537,117 @@ li.ikkilamchi {
 @keyframes example {
 	0% {
 		left: 0px;
-		top: 0px;
+		transform: rotate(0deg);
+	}
+
+	25% {
+		left: 500px;
+		transform: rotate(20deg);
 	}
 
 	50% {
-		left: 200px;
-		top: 0px;
+		left: 500px;
+		transform: rotate(0deg);
 	}
 
-	75% {
-		left: 100px;
-		top: 0px;
+	55% {
+		left: 500px;
+		transform: rotate(0deg);
+	}
+
+	70% {
+		left: 500px;
+		transform: rotate(0deg);
 	}
 
 	100% {
 		left: 0px;
-		top: 0px;
+		transform: rotate(-360deg);
 	}
+}
+
+
+/* Blog sekshion */
+
+.blog {
+	padding-top: 100px;
+}
+
+.blog_haqidagilar {
+	margin-top: 50px;
+}
+
+.blog_haqida {
+	display: inline-block;
+	width: 30%;
+	margin-right: 3%;
+	box-sizing: border-box;
+	/* padding: 30px; */
+	/* box-shadow: 0px 0px 5px 2px #8fa1aa; */
+}
+
+.blog_malimot {
+	background-color: #f8faff;
+	padding: 30px;
+	color: #797979;
+}
+
+.blog_haqida:hover .blog_malimot {
+	background-color: white;
+}
+
+.blog_haqida__images img {
+	width: 100%;
+}
+
+
+.blog_haqida:hover {
+	box-shadow: 0px 1px 5px rgb(5, 54, 77);
+}
+
+.blog_haqida_malimot span {
+	font-size: 14px;
+	margin-right: 30px;
+}
+
+.blog_haqida_malimot i {
+	margin-right: 5px;
+}
+
+.blog_malimot__title {
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	color: #05364d;
+	font-weight: 700;
+}
+
+.blog_malimot_discrepshin {
+	line-height: 27px;
+	font-weight: lighter;
+	font-size: 15px;
+}
+
+.blog_koproq {
+	font-size: 13px;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #05364d;
+	cursor: pointer;
+}
+
+.blog_koproq:hover {
+	color: #ed239f;
+}
+
+/* Hamkorlar lagatiplari */
+
+.hamkor {
+	padding-top: 100px;
+}
+
+.ham {
+	display: inline-block;
+	padding: 0 30px;
 }
