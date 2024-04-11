@@ -118,7 +118,6 @@
 		transform: translateZ(1.5em);
 		background-color: rgba(46, 28, 255, 0.5);
 		transform: rotate(180deg) translateZ(-1em);
-
 	}
 
 
@@ -131,8 +130,7 @@
 	.past:hover {
 		transform: rotateX(90deg) translateZ(1.5em);
 		background-color: rgba(46, 28, 255, 0.5);
-		transform: rotateX (-360deg) translateZ(1em);
-
+		transform: rotateX(-360deg) translateZ(1em);
 	}
 
 	/*																		bu animatsiya hususuyati haqida */
@@ -144,6 +142,8 @@
 		position: relative;
 		animation-name: example;
 		animation-duration: 5s;
+		animation-direction: alternate-reverse;
+		animation-iteration-count: 2;
 	}
 
 	@keyframes example {
@@ -176,6 +176,263 @@
 			left: 0px;
 			top: 0px;
 		}
+	}
+
+	/*                                                    bu radio va chekboxlarga stil berish hususuyati haqida  */
+	.radiolar {
+		padding-top: 500px;
+	}
+
+	.jinslar {
+		display: block;
+		position: relative;
+		padding-left: 36px;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+
+	.yasalgan {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 24px;
+		width: 24px;
+		background-color: blueviolet;
+		border-radius: 50%;
+	}
+
+	.jinslar:hover input~.yasalgan {
+		background-color: blue;
+	}
+
+	.jinslar input:checked~.yasalgan {
+		background-color: green;
+	}
+
+	.yasalgan::after {
+		top: 1.988px;
+		left: 2px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: white;
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	.jinslar input:checked~.yasalgan::after {
+		display: block;
+	}
+
+	.jinslar input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	.yasalgan1 {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 24px;
+		width: 24px;
+		background-color: blueviolet;
+	}
+
+	.yasalgan1::after {
+		left: 8px;
+		top: 4px;
+		width: 5px;
+		height: 10px;
+		border: solid white;
+		border-width: 0 3px 3px 0;
+		transform: rotate(45deg);
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	.jinslar input:checked~.yasalgan1::after {
+		display: block;
+	}
+
+
+	/*												 bu tooltip yani maslahat stil berish hususuyati haqida */
+	.maslahat {
+		position: relative;
+		display: inline-block;
+		border-bottom: 1px dotted black;
+		cursor: pointer;
+	}
+
+	.maslahat .maslahatmatn {
+		visibility: hidden;
+		width: 120px;
+		background-color: black;
+		color: white;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 0;
+		position: absolute;
+		z-index: 1;
+		left: 80px;
+		top: -50%;
+		opacity: 0;
+		transition: opacity 2s;
+	}
+
+	.maslahat .maslahatmatn::after {
+		content: "";
+		position: absolute;
+		bottom: 30%;
+		left: -8%;
+		margin-left: -10px;
+		border-width: 10px;
+		border-style: solid;
+		border-color: transparent black transparent transparent;
+	}
+
+	.maslahat:hover .maslahatmatn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	/*												 bu rasmga animatsiya berish stil berish hususuyati haqida */
+	.container {
+		position: relative;
+		width: 50%;
+	}
+
+	.images {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.ovetly {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 100%;
+		right: 0;
+		height: 100%;
+		width: 0;
+		/* opacity: 0; */
+		overflow: hidden;
+		transition: 5s ease;
+		background-color: #008cba;
+		opacity: 0.5;
+	}
+
+	.container:hover .ovetly {
+		width: 100%;
+		left: 0;
+	}
+
+	.text {
+		color: white;
+		font-size: 20px;
+		position: absolute;
+		top: 50%;
+		left: 40%;
+		transform: translate(-20, -20%);
+
+	}
+
+	.animer {
+		width: 100px;
+		height: 300px;
+		object-fit: cover;
+		object-position: 0% 0%;
+		animation: shoh 5s infinite;
+	}
+
+	@keyframes shoh {
+		0% {
+			object-position: 0% 0%;
+		}
+
+		25% {
+			object-position: 20% 0%;
+		}
+
+		100% {
+			object-position: 100% 100%;
+		}
+	}
+
+	.mask1 {
+		mask-image: url(images/img_26.PNG);
+		mask-size: 70%;
+		mask-repeat: no-repeat;
+	}
+
+	/*												 bu foydalanuvchı ınterfeysı hususuyati haqida */
+	.foydalanuvchi {
+		border: 2px solid;
+		padding: 20px;
+		width: 300px;
+		resize: both;
+		overflow: auto;
+	}
+
+	/*												 bu @mediya hususuyati haqida */
+	.column {
+		float: left;
+		width: 25%;
+		padding: 20px;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.row::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	@media screen and (max-width: 992px) {
+
+		.column {
+			width: 50%;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+
+		.column {
+			width: 100%;
+		}
+	}
+
+	/*												 bu flex hususuyati haqida */
+	.flex-container {
+		display: flex;
+		background-color: dodgerblue;
+		height: 200px;
+		/* flex-direction: column */
+		/* flex-direction: column-reverse; */
+		/* flex-direction: row-reverse; */
+		/* flex-wrap: wrap; */
+		/* flex-wrap: nowrap; */
+		/* flex-flow: row wrap; */
+		/* justify-content: center; */
+		/* justify-content: space-around; */
+		align-items: baseline;
+
+	}
+
+	.flex-container>div {
+		background-color: white;
+		margin: 100px;
+		font-size: 30px;
+		text-align: center;
+		line-height: 75px;
+		width: 100px;
+
 	}
 </style>
 
@@ -230,6 +487,109 @@
 
 	<!--																		bu animatsiya hususuyati haqida -->
 	<div class="animatsiya"></div>
+
+	<!--												 bu radio va chekboxlarga stil berish hususuyati haqida -->
+	<div class="radiolar">
+		<label class="jinslar">Erkak
+			<input type="radio" checked="checked" name="radio" value="radio-1">
+			<span class="yasalgan"></span>
+		</label>
+		<label class="jinslar">Erkak
+			<input type="radio" checked="checked" name="radio" value="radio-1">
+			<span class="yasalgan"></span>
+		</label>
+		<label class="jinslar">Erkak
+			<input type="radio" checked="checked" name="radio" value="radio-1">
+			<span class="yasalgan"></span>
+		</label>
+	</div>
+	<div class="radiolar">
+		<label class="jinslar">Erkak
+			<input type="checkbox" checked="checked" name="radio" value="radio-1">
+			<span class="yasalgan1"></span>
+		</label>
+		<label class="jinslar">Erkak
+			<input type="checkbox" checked="checked" name="radio" value="radio-1">
+			<span class="yasalgan1"></span>
+		</label>
+		<label class="jinslar">Erkak
+			<input type="checkbox" checked="checked" name="radio" value="radio-1">
+			<span class="yasalgan1"></span>
+		</label>
+	</div>
+
+	<!--												 bu tooltip yani maslahat stil berish hususuyati haqida -->
+	<div style="text-align: center; margin-bottom: 100px;">
+		<h1>Bu mishka olib borganda korsatiladigan matn</h1>
+
+		<div class="maslahat"> Koproq
+			<span class="maslahatmatn">Bu yerda malumotlar bor</span>
+		</div>
+	</div>
+
+	<!--												 bu rasmga animatsiya berish hususuyati haqida -->
+	<div class="container">
+		<img src="images/img_13.PNG" alt="aa" class="images">
+		<div class="ovetly">
+			<div class="text">Salom Shohruh</div>
+		</div>
+	</div>
+
+	<!--												 bu rasmga joylashtirish berish hususuyati haqida -->
+	<div>
+		<img src="images/img_11.PNG" alt="scf" width="400" height="300" class="animer">
+	</div>
+
+	<h1>The mask-image Property</h1>
+
+	<h3>An image with a mask layer image:</h3>
+	<div class="mask1">
+		<img src="images/img_15.PNG" alt="Cinque Terre" width="600" height="400">
+	</div>
+
+	<!--												 bu foydalanuvchı ınterfeysı hususuyati haqida -->
+	<div class="foydalanuvchi">
+		<p>Let the user resize only the width of this div element.</p>
+		<p>To resize: Click and drag the bottom right corner of this div element.</p>
+	</div>
+
+	<!--												 bu @mediya hususuyati haqida -->
+	<h2>Responsive Four Column Layout</h2>
+	<p><strong>Resize the browser window to see the responsive effect.</strong> On screens that are 992px wide or less,
+		the columns will resize from four columns to two columns. On screens that are 600px wide or less, the columns
+		will stack on top of each other instead of next to eachother.</p>
+
+	<div class="row">
+		<div class="column" style="background-color:#aaa;">
+			<h2>Column 1</h2>
+			<p>Some text..</p>
+		</div>
+		<div class="column" style="background-color:#bbb;">
+			<h2>Column 2</h2>
+			<p>Some text..</p>
+		</div>
+		<div class="column" style="background-color:#ccc;">
+			<h2>Column 3</h2>
+			<p>Some text..</p>
+		</div>
+		<div class="column" style="background-color:#ddd;">
+			<h2>Column 4</h2>
+			<p>Some text..</p>
+		</div>
+	</div>
+
+	<!--												 bu flex hususuyati haqida -->
+	<h1>Create a Flex Container</h1>
+
+	<div class="flex-container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+
+	<p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+
+	<p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
 </body>
 
 </html>
