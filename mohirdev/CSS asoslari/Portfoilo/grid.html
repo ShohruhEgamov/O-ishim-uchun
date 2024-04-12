@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		.grid-container {
+			display: grid;
+			/* column-gap: 50px;
+			row-gap: 50px; */
+			grid-template-columns: auto auto auto auto;
+			grid-gap: 10px;
+			background-color: #2196F3;
+			padding: 10px;
+		}
+
+		.grid-item {
+			background-color: rgba(255, 255, 255, 0.8);
+			border: 1px solid rgba(0, 0, 0, 0.8);
+			padding: 20px;
+			font-size: 30px;
+			text-align: center;
+		}
+
+		/* .item1 {
+			grid-column-start: 1;
+			grid-column-end: 4;
+			grid-row-start: 1;
+			grid-row-end: 4;
+		} */
+
+		/* .item3 {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+
+		.item4 {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+
+		.item5 {
+			grid-column-start: 1;
+			grid-row-end: 9;
+		}
+
+		 */
+
+		.item1 {
+			grid-area: 2 / 1 / span 2 / span 3;
+		}
+
+		.item8 {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+
+		.item9 {
+			grid-column-start: 3;
+			grid-column-end: 5;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>display: grid</h1>
+
+	<p>Use display: grid; to make a block-level grid container:</p>
+
+	<div class="grid-container">
+		<div class="grid-item item1">1</div>
+		<div class="grid-item item2">2</div>
+		<div class="grid-item item3">3</div>
+		<div class="grid-item item4">4</div>
+		<div class="grid-item item5">5</div>
+		<div class="grid-item item6">6</div>
+		<div class="grid-item item7">7</div>
+		<div class="grid-item item8">8</div>
+		<div class="grid-item item9">9</div>
+	</div>
+
+</body>
+
+</html>
