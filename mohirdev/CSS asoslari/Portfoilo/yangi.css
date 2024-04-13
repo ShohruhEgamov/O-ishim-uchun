@@ -155,3 +155,63 @@ li.ikkilamchi {
 	text-transform: capitalize;
 	color: #05364d;
 }
+
+.footer {
+	padding: 50px 0;
+	background-color: #021017;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.footer__brend img {
+	width: 128px;
+}
+
+.footer__navigator-qism {
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.footer__navigator-qism a {
+	color: white;
+	text-decoration: none;
+}
+
+.footer__social {
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	background: white;
+	border-radius: 36px;
+	color: #05364d;
+	font-size: 16px;
+	margin-right: 12px;
+}
+
+.footer__social:hover {
+	background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
+}
+
+.footer__social:hover i {
+	color: white;
+}
+
+.footer__navigator {
+	margin-bottom: 50px;
+}
+
+.footer_text {
+	color: #797979;
+}
+
+@media only screen and (max-width: 767px) {
+	.main-sarlovha {
+		display: none;
+	}
+
+	.container {
+		width: 80%;
+	}
+}

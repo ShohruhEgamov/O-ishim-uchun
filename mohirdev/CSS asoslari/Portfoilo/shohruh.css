@@ -29,7 +29,7 @@ body {
 
 .blur-line {
 	display: inline-block;
-	margin-left: 5px;
+	margin-left: 3.2rem;
 	position: relative;
 	top: -2px;
 	width: 80px;
@@ -66,28 +66,28 @@ body {
 .main-navigatorlar {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 5px;
+	padding: 3.2rem;
 }
 
 .main-navigatorlar a {
 	color: #05364d;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 0.888rem;
 	font-weight: 500;
 }
 
 .ikkilamchi {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 5px;
+	padding: 3.2rem;
 }
 
 .ikkilamchi a {
 	color: #05364d;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 0.888rem;
 	font-weight: 500;
 }
 
@@ -108,7 +108,7 @@ li.ikkilamchi {
 
 .ikkilamchi-ikki a {
 	color: #05364d;
-	padding: 12px 16px;
+	padding: 1.33rem 1rem;
 	text-decoration: none;
 	display: block;
 	text-align: left;
@@ -148,7 +148,7 @@ li.ikkilamchi {
 
 /* Asosiy qisim styllar */
 .asosiy_qisim {
-	padding: 100px 30px;
+	padding: 0.16rem 0.533rem;
 }
 
 .asosiy_qisim>div {
@@ -186,15 +186,15 @@ li.ikkilamchi {
 }
 
 .asosiy_qisim__salom {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
-	margin-bottom: 20px;
-	letter-spacing: 2px;
+	margin-bottom: 1.25rem;
+	letter-spacing: 0.125rem;
 	color: #797979;
 }
 
 .asosiy_qisim__ozim {
-	font-size: 60px;
+	font-size: 50px;
 	font-weight: 5800;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -650,4 +650,78 @@ li.ikkilamchi {
 .ham {
 	display: inline-block;
 	padding: 0 30px;
+}
+
+@media only screen and (max-width: 767px) {
+	.asosiy_qisim__rasm {
+		display: none;
+	}
+
+	.buttom {
+		display: none;
+	}
+
+	.asosiy_qisim>div {
+		width: 100%;
+	}
+
+	.statistika__malumot {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.men_haqimda__images img {
+		display: none;
+	}
+
+	.men_haqimda>div {
+		width: 100%;
+	}
+
+	.servis-card {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.portfolio-items {
+		width: 100%;
+	}
+
+	.mijoz-haqida>div {
+		width: 100%;
+		float: none;
+	}
+
+	.portfolio-item {
+		width: 100%;
+
+	}
+
+	.port-item-1,
+	.port-item-2,
+	.port-item-3 {
+		position: static;
+	}
+
+	.blog_haqida {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.ham {
+		display: block;
+		padding: 0;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.footer__navigator {
+		display: none;
+	}
+
+	.statistika__malumot {
+		animation: none;
+	}
 }
