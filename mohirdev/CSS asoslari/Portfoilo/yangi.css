@@ -3,6 +3,10 @@ body {
 	font-family: sans-serif;
 }
 
+a {
+	transition: all 0.5 ease-in-out;
+}
+
 ::selection {
 	color: red;
 	background: black;
@@ -11,6 +15,8 @@ body {
 .container {
 	width: 1140px;
 	margin: 0 auto;
+	/* display: flex;
+	align-items: center; */
 }
 
 .main-header__brend img {
@@ -52,14 +58,11 @@ body {
 	z-index: 10;
 }
 
-.main-header__brend {
-	display: inline-block;
-	vertical-align: middle;
-}
 
-.main-navigator {
-	display: inline-block;
-	vertical-align: middle;
+
+.yopishgan {
+	display: flex;
+	align-items: center;
 }
 
 .main-navigatorlar {
@@ -206,7 +209,7 @@ li.ikkilamchi {
 	color: #797979;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
 	.main-sarlovha {
 		display: none;
 	}
@@ -214,4 +217,10 @@ li.ikkilamchi {
 	.container {
 		width: 80%;
 	}
+
+	.container {
+		width: 95%;
+	}
 }
+
+@media only screen and (max-width: 767px) {}

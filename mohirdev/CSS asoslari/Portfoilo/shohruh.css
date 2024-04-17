@@ -3,6 +3,10 @@ body {
 	font-family: sans-serif;
 }
 
+a:hover {
+	transition: all 0.3s ease-in-out;
+}
+
 ::selection {
 	color: red;
 	background: black;
@@ -11,6 +15,8 @@ body {
 .container {
 	width: 1140px;
 	margin: 0 auto;
+	display: flex;
+	align-items: center;
 }
 
 .main-header__brend img {
@@ -149,11 +155,13 @@ li.ikkilamchi {
 /* Asosiy qisim styllar */
 .asosiy_qisim {
 	padding: 0.16rem 0.533rem;
+	display: flex;
+	justify-content: space-between;
 }
 
 .asosiy_qisim>div {
-	width: 50%;
-	float: left;
+	/* width: 50%;
+	float: left; */
 }
 
 .asosiy_qisim__rasm {
@@ -300,6 +308,8 @@ li.ikkilamchi {
 	line-height: 27px;
 }
 
+
+
 .buttom {
 	border: none;
 	background-image: linear-gradient(to right, blue, red);
@@ -422,6 +432,7 @@ li.ikkilamchi {
 .statistika__malumot:hover {
 	border: 1px solid blue;
 	box-shadow: 0px 0px 5px 2px #8fa1aa;
+	/* animation-play-state: paused; */
 }
 
 /* Portfoilo */
@@ -459,7 +470,7 @@ li.ikkilamchi {
 
 .port-item-3 {
 	position: absolute;
-	top: 460px;
+	top: 250px;
 	right: 0;
 	z-index: 1;
 }
@@ -652,12 +663,8 @@ li.ikkilamchi {
 	padding: 0 30px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
 	.asosiy_qisim__rasm {
-		display: none;
-	}
-
-	.buttom {
 		display: none;
 	}
 
@@ -665,9 +672,10 @@ li.ikkilamchi {
 		width: 100%;
 	}
 
-	.statistika__malumot {
-		width: 100%;
-		margin-bottom: 20px;
+	.statistika {
+		padding-top: 1rem;
+		text-align: center;
+		justify-content: center;
 	}
 
 	.men_haqimda__images img {
@@ -679,6 +687,47 @@ li.ikkilamchi {
 	}
 
 	.servis-card {
+		width: 45%;
+		margin-bottom: 20px;
+	}
+
+	.mijoz-haqida>div {
+		width: 100%;
+		float: none;
+	}
+
+	.blog_haqida {
+		width: 45%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.ham {
+		display: block;
+		padding: 0;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+
+	.buttom {
+		display: none;
+	}
+
+
+
+	.statistika__malumot {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+
+
+	.servis-card {
 		width: 100%;
 		margin-right: 0;
 		margin-bottom: 20px;
@@ -688,10 +737,6 @@ li.ikkilamchi {
 		width: 100%;
 	}
 
-	.mijoz-haqida>div {
-		width: 100%;
-		float: none;
-	}
 
 	.portfolio-item {
 		width: 100%;
@@ -704,21 +749,14 @@ li.ikkilamchi {
 		position: static;
 	}
 
-	.blog_haqida {
-		width: 100%;
-		margin-right: 0;
-		margin-bottom: 20px;
+
+	.blog_haqidagilar {
+		flex-direction: column;
 	}
 
-	.ham {
-		display: block;
-		padding: 0;
-		text-align: center;
-		margin-bottom: 10px;
-	}
 
 	.footer__navigator {
-		display: none;
+		display: flex;
 	}
 
 	.statistika__malumot {

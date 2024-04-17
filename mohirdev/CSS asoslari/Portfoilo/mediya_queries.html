@@ -36,7 +36,7 @@
 			}
 		} */
 
-		h1 {
+		/* h1 {
 			font-size: 0.8rem;
 		}
 
@@ -62,13 +62,51 @@
 			h1 {
 				font-size: 3rem;
 			}
+		} */
+
+		.element {
+			position: relative;
+			width: 200px;
+			height: 50px;
+			background-image: linear-gradient(to right, blue, red);
+		}
+
+		.element::before {
+			position: absolute;
+			content: "";
+			inset: 0;
+			color: white;
+			/* same as { top: 0; right: 0; bottom: 0; left: 0; } */
+			background-image: linear-gradient(to left, blue, red);
+			opacity: 0;
+			transition: opacity 0.5s linear;
+		}
+
+		.element:hover::before {
+			color: white;
+			opacity: 1;
+		}
+
+		.matn {
+			position: absolute;
+			text-align: center;
+			margin-left: 70px;
+			margin-top: -40px;
+			color: black;
+			cursor: pointer;
+		}
+
+		.ass {
+			padding: 50px;
 		}
 	</style>
 </head>
 
+
 <body>
-	<div class="box">
-		<h1>Bu yerda RWD Mohir dev kursi orqali o'rganamiz</h1>
+	<div class="ass">
+		<div class="element"></div>
+		<div class="matn">salom</div>
 	</div>
 </body>
 

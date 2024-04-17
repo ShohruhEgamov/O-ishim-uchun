@@ -1,5 +1,5 @@
 .secsin_title {
-	padding-top: 100px;
+	padding-top: 10px;
 }
 
 textarea,
@@ -33,4 +33,21 @@ input:focus {
 
 .pastroq {
 	margin-top: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+
+	.secsin_title,
+	.maqola-satri {
+		width: 100%;
+	}
+
+	.havf,
+	.yana,
+	.emaa,
+	input [type="text"] {
+		width: 100%;
+		padding: 0;
+		padding-right: 10px;
+	}
 }
