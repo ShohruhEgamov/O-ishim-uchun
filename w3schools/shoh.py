@@ -10,3 +10,6 @@ personal = {
     "yosh": "23",
     "mamlakat": "urgench"
 }
+
+x = (5/9) * (-32)
+print(x)
