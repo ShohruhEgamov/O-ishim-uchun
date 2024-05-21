@@ -1,5 +1,5 @@
-f = open ("demofile.txt")
-print(f)
+# f = open ("demofile.txt")
+# print(f)
 
 s=d=f="oryol"
 print(s)

@@ -1,3 +1,4 @@
+'use strict';
 function Salomlashish() {
 	document.getElementById("salom").innerHTML = "Salom bu yerda nima qilayapsan"
 }
@@ -290,3 +291,394 @@ document.getElementById("stri").innerHTML = typeof s + "<br>" + typeof c;
 
 // document.getElementById("demo").innerHTML = menHaq[0];
 // console.log(text)
+
+
+//                                                                 JavaScript string qidiruvi
+
+// let text = "Salom shohruh men dasturchiman";
+// let index = text.indexOf("dasturchiman");
+
+// document.getElementById('header').innerHTML = index;
+// console.log(text)
+
+// let text = "Salom shohruh men dasturchiman men";
+// let index = text.lastIndexOf("men");
+
+// document.getElementById('header').innerHTML = index;
+// console.log(text)
+
+// let text = "Please locate where 'locate' occurs!";
+// let index = text.lastIndexOf("locate", 15);
+
+// document.getElementById('header').innerHTML = index;
+// console.log(text)
+
+// let text = "Please locate where 'locate' occurs!";
+// let index = text.search("where");
+
+// document.getElementById('header').innerHTML = index;
+// console.log(text)
+
+// let text = "The rain in SPAIN stays mainly in the plain";
+// const myArr = text.match("in");
+
+// document.getElementById('header').innerHTML = myArr.length + " " + myArr;
+// console.log(text)
+
+// let text = "The rain in  stays mainly in the plain";
+// const myArr = text.match(/ain/gi);
+
+// document.getElementById('header').innerHTML = myArr.length + " " + myArr;
+// console.log(text)
+
+// let text = "I love cats. Cats are very easy to love. Cats are very";
+// const iterator = text.matchAll("Cats");
+
+// document.getElementById('header').innerHTML = Array.from(iterator);
+// console.log(text)
+
+// let text = "I love cats. Cats are very easy to love. Catsd are very popular.";
+// const iterator = text.matchAll(/Cats/gi);
+
+// document.getElementById('header').innerHTML = Array.from(iterator);
+// console.log(text)
+
+// let text = "Hello world, welcome to the universe.";
+// document.getElementById('header').innerHTML = text.includes("welcom");
+// console.log(text)
+
+// let text = "Hello world, welcome to the universe.";
+// document.getElementById('header').innerHTML = text.startsWith("Hello");
+// console.log(text)
+
+// let text = "Hello world, welcome to the universe.";
+// document.getElementById('header').innerHTML = text.endsWith("universe.");
+// console.log(text)
+
+//                                                                 JavaScript shablon satrlari
+
+// let ism = "Shohruh";
+// let familya = "Egamov";
+
+// let text = `Salom ${ism} ${familya} yaxshimisiz.`
+// document.getElementById('header').innerHTML = text.endsWith(".");
+// console.log(text)
+
+// let son = 10;
+// let kurs = 0.25;
+
+// let text = `Summa ${(son * (1 + kurs)).toFixed(2)}`
+// document.getElementById('header').innerHTML = text.endsWith(".");
+// console.log(text)
+
+
+// let header = "Shohruhbek";
+// let tags = ["Birinchi", "Ikkinchi", "Uchinchi"];
+
+// let html = `<h2>${header}<h2><ul>`;
+// for (const x of tags) {
+// 	html += `<<li>${x}</li>`
+// }
+
+// html += `</ul>`;
+// document.getElementById('header').innerHTML = html;
+// console.log(text)
+
+// let myNumber = 2;
+// let txt = "";
+// while (myNumber != Infinity) {
+//    myNumber = myNumber * myNumber;
+//    txt = txt + myNumber + "<br>";
+// }
+// document.getElementById("header").innerHTML = txt;
+// console.log(header)
+
+
+//                                                                 JavaScript BigInt
+
+// let x = Number.MIN_SAFE_INTEGER;
+
+// document.getElementById('header').innerHTML = x
+
+
+// console.log(header)
+
+
+// document.getElementById('header').innerHTML = Number.isInteger(10) + "<br>" + Number.isInteger(10.5)
+
+
+// console.log(header)
+
+
+//                                                                 JavaScript raqamlari usullari
+
+// let x = 123;
+// document.getElementById("header").innerHTML =
+// 	x.toPrecision() + "<br>" +
+// 	(123).toString() + "<br>" +
+// 	(100 + 23).toString();
+
+// console.log(header)
+
+// let x = 9.656;
+// document.getElementById("header").innerHTML =
+// 	x.toExponential() + "<br>" +
+// 	x.toExponential(2) + "<br>" +
+// 	x.toExponential(6);
+
+// console.log(header)
+
+// let x = 9.656;
+// document.getElementById("header").innerHTML =
+// 	x.toFixed(0) + "<br>" +
+// 	x.toFixed(2) + "<br>" +
+// 	x.toFixed(4) + "<br>" +
+// 	x.toFixed(6);
+
+// console.log(header)
+
+// let x = 9.656;
+// document.getElementById("header").innerHTML =
+// 	x.toPrecision() + "<br>" +
+// 	x.toPrecision(2) + "<br>" +
+// 	x.toPrecision(4) + "<br>" +
+// 	x.toPrecision(6);
+
+
+// console.log(header)
+
+// let x = 9.656;
+// document.getElementById("header").innerHTML =
+// 	x.valueOf() + "<br>" +
+// 	(123).valueOf() + "<br>" +
+// 	(100 + 23).valueOf();
+
+
+// console.log(header)
+
+// document.getElementById("header").innerHTML =
+//   parseInt("-10") + "<br>" +
+//   parseInt("-10.33") + "<br>" +
+//   parseInt("10") + "<br>" +
+//   parseInt("10.33") + "<br>" +
+//   parseInt("10 6") + "<br>" +
+//   parseInt("10 years") + "<br>" +
+//   parseInt("years 10");
+
+// console.log(header)
+// -10
+// -10
+// 10
+// 10
+// 10
+// 10
+// NaN
+
+
+//                                                                 JavaScript raqamlari xususiyatlari
+
+// const mevalar = ["Olma", "Nok", "Anor", "Behi"];
+// let meUzunlik = mevalar.length;
+
+// let text = "<ul>";
+// for (let i = 0; i < meUzunlik; i++) {
+//   text += "<li>" + mevalar[i] + "</li>";
+// }
+// text += "</ul>";
+
+// document.getElementById("header").innerHTML = text;
+// console.log(header)
+
+
+
+
+// const mevalar = ["Olma", "Nok", "Anor", "Behi"];
+
+// let text = "<ul>";
+// mevalar.forEach(myFunks);
+// text += "</ul>";
+
+// document.getElementById("header").innerHTML = text;
+
+// function myFunks(value){
+//   text += "<li>" + value + "</li>";
+// }
+// console.log(header)
+
+
+
+
+// const fruits = ["Banana", "Orange", "Apple"];
+// fruits[6] = "Lemon";
+
+// let fLen = fruits.length;
+// let text = "";
+// for (i = 0; i < fLen; i++) {
+//   text += fruits[i] + "<br>";
+// }
+
+// document.getElementById("header").innerHTML = text;
+// console.log(header)
+
+
+// var fruits = ["Banana", "Orange", "Apple"];
+// document.getElementById("demo").innerHTML = fruits instanceof Array;
+
+// const fruits = ["Banana", "Orange", "Apple"];
+// document.getElementById("demo").innerHTML = Array.isArray(fruits);
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("header").innerHTML = fruits.join(" * ");
+
+// // Log to console
+// console.log(fruits)
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.push("Kivi")
+// document.getElementById("header").innerHTML = fruits;
+
+// // Log to console
+// console.log(fruits)
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("header").innerHTML = fruits;
+// document.getElementById("header").innerHTML = fruits.pop();
+// // Log to console
+// console.log(fruits)
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("header").innerHTML = fruits;
+// document.getElementById("header").innerHTML = fruits.shift();
+// // Log to console
+// console.log(fruits)
+
+
+// const meva = ["Banana", "Orange", "Apple", "Mango"]
+// // Log to console
+// console.log(meva)
+
+
+// let arr = [];
+
+// console.log(arr instanceof Array); // true
+// console.log(arr instanceof Object); // true
+// console.log(Array.isArray(arr)); // true
+// console.log(Object.prototype.toString.call(arr) === '[object Array]');
+
+// const meva = ["apple", "banana", "cherry"];
+// meva.forEach(function(narsa, son){
+// 	console.log(son, narsa)
+// })
+
+// function Mosh(raqam, rusum) {
+// 	this.raqam = raqam;
+// 	this.rusum = rusum;
+// }
+// let myCar = new Mosh('Toyota', 'Corolla');
+
+// console.log(myCar instanceof Mosh)
+
+// let arr = [];
+
+// console.log(arr instanceof Array); // true
+// console.log(arr instanceof Number); // false
+// console.log(Array.isArray(arr)); // true
+// console.log(Object.prototype.toString.call(arr) === '[object Array]'); // true
+
+// const user = {
+// 	name: "ali",
+// 	sayName: function(){
+// 		const inner = () => {
+// 			console.log(this.name);
+// 		};
+// 		inner();
+// 	}
+// };
+// user.sayName();
+
+// let fruits = ["Olma", "Banan", "Apelsin"];
+// let result = fruits.join(", ");
+// console.log(result); // "Olma, Banan, Apelsin"
+
+// let numbers = [1, 2, 3, 4, 5];
+// let result = numbers.join(" ");
+// console.log(result); // "12345"
+
+
+// let params = ["name=John", "age=30", "city=NewYork"];
+// let queryString = params.join(" ");
+// console.log(queryString); // "name=John&age=30&city=NewYork"
+
+// let stack = [3, 4, 5, 1, 2,];
+// while (stack.length > 2) {
+//   let item = stack.pop();
+//   console.log(item);
+// }
+// 5
+// 4
+// 3
+// 2
+// 1
+
+// let sonlar = ["Birinchi"];
+// sonlar.unshift("Ikkinchi");
+// sonlar.unshift("Uchinchi");
+// console.log(sonlar); // ["Uchinchi", "Ikkinchi", "Birinchi"]
+
+
+// const myObj = {
+// 	name: "John",
+// 	age: 30,
+// 	myCars: {
+// 	  car1: "Ford",
+// 	  car2: "BMW",
+// 	  car3: "Fiat"
+// 	}
+//   }
+//   let a = myObj.myCars.car2;
+//   console.log(a)
+
+// const fruits = ["Apple", "Orange", "Apple", "Mango"];
+// let position = fruits.indexOf("Orange") + 1;
+
+// let meva = "Apple is found in position " + position;
+// console.log(meva)
+
+// const numbers = [4, 9, 16, 25, 29];
+// let first = numbers.find(myFunction);
+
+// function myFunction(value, index, array) {
+// 	return value > 18;
+// }
+
+// const meva = ["Banana", "Orange", "Apple", "Mango"]
+// meva.sort()
+// console.log(meva)
+
+// const meva = ["Banana", "Orange", "Apple", "Mango"];
+// meva.reverse()
+// console.log(meva)
+
+// const meva = ["Banana", "Orange", "Apple", "Mango"];
+// meva.sort()
+// meva.reverse()
+
+// console.log(meva)
+
+// const months = ["Jan", "Feb", "Mar", "Apr"];
+// const reversed = months.toReversed();
+// console.log(reversed);
+// console.log(months);
+
+// const points = [40, 100, 1, 5, 25, 10];
+// points.sort(function(a, b){return a - b});
+// console.log(points);
+
+// const points = [40, 100, 1, 5, 25, 10];
+// points.sort(function (a, b) {
+// 	return a - b;
+// });
+// console.log(points);
+
+
