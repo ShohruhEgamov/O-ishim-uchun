@@ -475,7 +475,7 @@ document.getElementById("stri").innerHTML = typeof s + "<br>" + typeof c;
 // NaN
 
 
-//                                                                 JavaScript raqamlari xususiyatlari
+//                                                                 JavaScript massivlar va sanalar xususiyatlari
 
 // const mevalar = ["Olma", "Nok", "Anor", "Behi"];
 // let meUzunlik = mevalar.length;
@@ -680,5 +680,517 @@ document.getElementById("stri").innerHTML = typeof s + "<br>" + typeof c;
 // 	return a - b;
 // });
 // console.log(points);
+
+// const numbers1 = [45, 4, 9, 16, 25];
+// const numbers2 = numbers1.map(myFunction);
+
+// console.log(numbers1);
+// console.log(numbers2);
+
+// function myFunction(value) {
+// 	return value * 2;
+// }
+
+// const numbers = [45, 4, 9, 16, 25];
+
+// let txt = "";
+// numbers.forEach(myFunction);
+
+// console.log(txt);
+
+// function myFunction(value) {
+// 	txt += value + "<br>";
+// }
+
+// const numbers = [1, 2, 3, 4];
+// const squares = numbers.map(function(num) {
+//   return num * num;
+// });
+
+// console.log(squares); // [1, 4, 9, 16]
+
+// const users = [
+// 	{ name: 'Alice', age: 25 },
+// 	{ name: 'Bob', age: 30 },
+// 	{ name: 'Charlie', age: 35 }
+// ];
+
+// const names = users.map(user => user.age);
+
+// console.log(names); // ['Alice', 'Bob', 'Charlie']
+
+
+// const numbers = [1, 2, 3, 4];
+// const result = numbers.flatMap(num => [num, num * 2]);
+
+// console.log(result);
+
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const oddNumbers = numbers.filter(function(number) {
+//   return number % 2 !== 0;
+// });
+
+// console.log(oddNumbers);
+
+// const words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
+
+// const longWords = words.filter(word => word.length > 6);
+
+// console.log(longWords);
+// // ["exuberant", "destruction", "present"]
+
+// const numbers = [1, 2, 5, 4, 5];
+
+// const sum = numbers.reduce(function(a, b) {
+//   return a + b;
+// }, 0);
+
+// console.log(sum);
+// // 15
+
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const sum = numbers.reduceRight(function(accumulator, currentValue) {
+//   return accumulator + currentValue;
+// }, 0);
+
+// console.log(sum);
+// // 15
+
+// const words = ["hello", "world", "from", "reduceRight"];
+
+// const sentence = words.reduceRight(function (accumulator, currentValue) {
+// 	return accumulator + " " + currentValue;
+// });
+
+// console.log(sentence);
+// "reduceRight from world hello"
+
+
+// const numbers = [45, 4, 9, 16, 25];
+// let allOver18 = numbers.every(myFunction);
+
+// console.log(allOver18)
+
+// function myFunction(value) {
+// 	return value > 1
+// }
+
+// const numbers = [45, 4, 9, 16, 25];
+// let allOver18 = numbers.some(myFunction);
+
+// console.log(allOver18)
+
+// function myFunction(value) {
+// 	return value > 40
+// }
+
+// const myArr = Array.from("ABCDEFG");
+// console.log(myArr); // ["A", "B", "C", "D", "E", "F", "G"]
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const keys = fruits.keys();
+
+// let text = "";
+// for (let x of keys) {
+//   text += x + "<br>";
+// }
+
+// console.log(text)
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const f = fruits.entries();
+
+// for (let x of f) {
+// 	console.log(x);
+// }
+
+// const months = ["Januar", "Februar", "Mar", "April"];
+// const myMonths = months.with(2, "March");
+// console.log(myMonths); // ["Januar", "Februar", "March", "April"]assistant
+
+// const q1 = ["Jan", "Feb", "Mar"];
+// const q2 = ["Apr", "May", "Jun"];
+// const q3 = ["Jul", "Aug", "Sep"];
+// const q4 = ["Oct", "Nov", "May"];
+
+// const year = [...q1, ...q2, ...q3, ...q4];
+// console.log(year)
+
+// const d = new Date();
+// const n = d.toDateString();
+// console.log(n)
+
+// const msec = Date.parse("dec 21, 2000");
+// console.log(msec)
+
+// const d = new Date("2000-12-21")
+// console.log(d.getFullYear())
+
+// const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+// const d = new Date();
+// let month = months[d.getMonth()];
+// console.log(month);
+
+// const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+// const d = new Date();
+// let day = days[d.getDay()];
+// console.log(day)
+
+// const d = new Date();                           //Usul getTimezoneOffset()mahalliy vaqt va UTC vaqti o'rtasidagi farqni (daqiqalarda) qaytaradi:
+// let year = d.getTimezoneOffset();
+// console.log(year)
+
+
+// const d = new Date();
+// // d.setFullYear(2000);
+// // d.setFullYear(2020, 11, 3);
+// // d.setMonth(11);
+// // d.setDate(15);
+// // d.setDate(d.getDate() + 100);
+// d.setHours(22);
+// console.log(d)
+
+// let text;
+// const today = new Date();
+// const someday = new Date();
+// someday.setFullYear(2000, 11, 21);
+
+// if (someday > today) {
+// 	text = "Today is before December 21, 2000.";
+//   } else {
+// 	text = "Today is after December 21, 2000.";
+//   }
+// console.log(text)
+
+//                                                                 JavaScript matematika xususiyatlari
+
+// let a = "Math.E:  " + Math.E +
+// "Math.PI:" + Math.PI +
+// "Math.SQRT2: " + Math.SQRT2 +
+// "Math.SQRT1_2:  " + Math.SQRT1_2 +
+// "Math.LN2:  " + Math.LN2 +
+// "Math.LN10:  " + Math.LN10 +
+// "Math.LOG2E:  " + Math.LOG2E +
+// "Math.Log10E:  " + Math.LOG10E;
+
+// console.log(a)
+
+// console.log(Math.round(4.4))
+// console.log(Math.ceil(4.2))
+// console.log(Math.floor(4.6))
+// console.log(Math.trunc(4.6))
+// console.log(Math.sign(4.6))
+// console.log(Math.pow(8, 2))
+// console.log(Math.sqrt(16))
+// console.log(Math.abs(-4.6))
+// console.log("The sine value of 90 degrees is " + Math.sin(90 * Math.PI / 180))
+// console.log("The sine value of 90 degrees is " + Math.cos(0 * Math.PI / 180))
+// console.log(Math.min(0, 150, 30, 20, -8, -200))
+// console.log(Math.max(0, 150, 30, 20, -8, -200))
+// console.log(Math.random())
+
+// console.log(Math.log(-1)) // NaN
+// console.log(Math.log(-0)) // -Infinity
+// console.log(Math.log(0)) // -Infinity
+// console.log(Math.log(1)) // 0
+// console.log(Math.log(10)) // 2.302585092994046
+// console.log(Math.log(Infinity))// Infinity
+
+// function buYerda(x, y) {
+// 	return Math.log(y) / Math.log(x);
+// }
+
+// console.log(buYerda(2, 8));     // 2 x 2 x 2 = 8 Expected output: 3
+
+
+// console.log(buYerda(5, 625));    // 5 x 5 x 5 x 5 = 625 Expected output: 4
+
+
+// console.log(Math.log2(16))
+
+//                                                                 JavaScript random xususiyatlari
+
+// const ism = ['shoh', 'far', 'bek', 'diy']
+// const f = ism.keys();
+// console.log(Math.floor(Math.random() * f))
+
+// console.log(Math.floor(Math.random() * 10))
+
+// function getRndInteger(min, max) {
+// 	return Math.floor(Math.random() * (max - min)) + min;
+//   }
+
+// function getRndInteger(min, max) {
+// 	return Math.floor(Math.random() * (max - min + 1) ) + min;
+//   }
+
+//                                                                 JavaScript random xususiyatlari
+
+// const booolen = ["100 is " + Boolean(100) +
+// 	"3.14 is " + Boolean(3.14) +
+// 	"-15 is " + Boolean(-15) +
+// 	"Any (not empty) string is " + Boolean("Hello") +
+// 	"Even the string 'false' is " + Boolean('false') +
+// 	"Any expression (except zero) is " + Boolean(1 + 7 + 3.14)]
+
+// console.log(booolen)
+
+// let name = null;
+// let text = "missing";
+// let result = name ?? text;
+// console.log(result); // "missing"assistant
+
+//                                                                        JavaScript if else xossalari
+
+// if (new Date().getHours() < 8) {
+// 	console.log("Good day!");
+// }
+
+// else (
+// 	console.log("Good morning!")
+// )
+
+// const time = new Date('March 13, 08 24:20').getHours();
+// let greeting;
+// if (time < 10) {
+// 	greeting = "Good morning";
+// }
+
+// else if (time < 20) {
+// 	greeting = "Good day";
+// }
+
+// else if (time < 24) {
+// 	greeting = "Good ningt";
+// }
+// else {
+// 	greeting = "Good evening";
+// }
+
+// console.log(greeting)
+
+
+
+// function taqqoslash(a) {
+// 	let result;
+// 	if (a > 0) {
+// 		result = "Musbat son";
+// 	}
+// 	else if (a < 0) {
+// 		result = "Manfiy son";
+// 	}
+// 	else {
+// 		result = "Manfiy son";
+// 	}
+// 	return result;
+// }
+// console.log(taqqoslash(5))
+
+
+// let day;
+// switch (new Date().getDay()) {
+// 	case 0:
+// 		day = "Yakshanba";
+// 		break;
+// 	case 1:
+// 		day = "Dushanba";
+// 		break;
+// 	case 2:
+// 		day = "Seshanba";
+// 		break;
+// 	case 3:
+// 		day = "Chorshanba";
+// 		break;
+// 	case 4:
+// 		day = "Payshanba";
+// 		break;
+// 	case 5:
+// 		day = "Juma";
+// 		break;
+// 	case 6:
+// 		day = "Shanba";
+// 		break;
+// }
+// console.log(day)
+
+// let text;
+// switch (new Date().getDay()) {
+// 	case 6:
+// 		text = "Today is Saturday";
+// 		break
+// 	case 0:
+// 		text = "Today is Sunday";
+// 		break;
+// 	default:
+// 		text = "Looking forward to the Weekend";
+// }
+// console.log(text)
+
+
+// let text;
+// switch (new Date().getDay()) {
+// 	case 4:
+// 	case 5:
+// 		text = "Bugun ish kuni"
+// 		break;
+// 	case 0:
+// 	case 6:
+// 		text = "Bugun dam olish"
+// 		break;
+// 	default:
+// 		text = "Bugun ish vaqtida"
+// }
+// console.log(text)
+
+// let x = "1";
+
+// switch (x) {
+// 	case "0":
+// 		text = "Off"
+// 		break;
+// 	case "1":
+// 		text = "On"
+// 		break;
+// 	default:
+// 		text = "No value found"
+// }
+// console.log(text)
+
+
+//                                                                        JavaScript loop for xossalari
+
+// const carss = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+// let = text = "";
+
+// for (let i = 0; i < carss.length; i++){
+// 	text += carss[i];
+// }
+// console.log(text)
+
+// let text = "";
+
+// for (let i = 0; i < 5; i++) {
+//   text += " The number is " + i;
+// }
+
+// for (let i = 0, len = carss.length, text = ""; i < len; i++) {
+// 	text += carss[i]";
+//   }
+
+// const carss = ["BMW", "Volvo", "Saab", "Ford"];
+// let i = 2;
+// let len = carss.length;
+// let text = "";
+
+// for (; i < len; i++) {
+//   text += carss[i];
+// }
+// console.log(text)
+
+// const carss = ["BMW", "Volvo", "Saab", "Ford"];
+
+// let i = 0;
+// let len = carss.length;
+// let text = " ";
+
+// for (; i < len;) {
+//   text += carss[i] + ' ';
+//   i++;
+// }
+// console.log(text)
+
+// const foo = 5;
+// let output = "Output: ";
+// switch (foo) {
+//   case 0:
+//     output += "So ";
+//   case 1:
+//     output += "What ";
+//     output += "Is ";
+//   case 2:
+//     output += "Your ";
+//   case 3:
+//     output += "Name";
+//   case 4:
+//     output += "?";
+//     console.log(output);
+//     break;
+//   case 5:
+//     output += "!";
+//     console.log(output);
+//     break;
+//   default:
+//     console.log("Please pick a number from 0 to 5!");
+// }
+
+// const Animal = "Giraffe";
+// switch (Animal) {
+//   case "Cow":
+//   case "Giraffe":
+//   case "Dog":
+//   case "Pig":
+//     console.log("This animal is not extinct.");
+//     break;
+//   case "Dinosaur":
+//   default:
+//     console.log("This animal is extinct.");
+// }
+
+// const expr = "Bananas";
+// switch (expr) {
+// 	case "Oranges":
+// 		console.log("Oranges are $0.59 a pound.");
+// 		break;
+// 	case "Apples":
+// 		console.log("Apples are $0.32 a pound.");
+// 		break;
+// 	case "Bananas":
+// 		console.log("Bananas are $0.48 a pound.");
+// 		break;
+// 	case "Cherries":
+// 		console.log("Cherries are $3.00 a pound.");
+// 		break;
+// 	case "Mangoes":
+// 	case "Papayas":
+// 		console.log("Mangoes and papayas are $2.79 a pound.");
+// 		break;
+// 	default:
+// 		console.log(`Sorry, we are out of ${expr}.`);
+// }
+
+// console.log("Is there anything else you'd like?");
+
+// const action = "say_hello";
+// switch (action) {
+//   case "say_hello": {
+//     const message = "hello";
+//     console.log(message);
+//     break;
+//   }
+//   case "say_hi": {
+//     const message = "hi";
+//     console.log(message);
+//     break;
+//   }
+//   default: {
+//     console.log("Empty action received.");
+//   }
+// }
+
+
+// let str = '';
+
+// for (let i = 0; i < 9; i++) {
+//   str = str + i;
+// }
+
+// console.log(str);
+// // Expected output: "012345678"
+
 
 
