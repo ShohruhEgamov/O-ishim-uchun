@@ -45,13 +45,65 @@
 // 	document.getElementById("demo").innerHTML = voteable + " to vote.";
 // }
 
-function myFunction() {
-	let voteable;
-	let age = Number(document.getElementById("age").value);
-	if (isNaN(age)) {
-		voteable = "Input is not a number";
-	} else {
-		voteable = (age < 18) ? "Too young" : "Old enough";
+
+
+// const rang = confirm("bu yerga kirit")
+
+// const meva = [];
+
+// meva[0] = (prompt("meva kirit"));
+// meva[1] = (prompt("meva kirit"));
+// meva[2] = (prompt("meva kirit"));
+
+// console.log(meva);
+
+
+// function juftSon(number) {
+// 	if (number % 2 == 0) {
+// 		console.log(`${number} juft son`);
+// 	}
+// 	else {
+// 		console.log(`${number} toq son`);
+// 	}
+// 	default:
+// 	console.log("son kiritilmadi")
+// }
+// juftSon(prompt('Son kirit'))
+
+// function juftSon(number) {
+// 	if (number % 2 == 0) {
+// 		console.log(`${number} juft son`);
+// 	}
+// 	else {
+// 		console.log(`${number} toq son`);
+// 	}
+// }
+
+// juftSon(Number(prompt('Son kirit')));
+
+// const juftTop = function (number) {
+// 	if (number % 2 == 0) {
+// 		console.log(`${number} Juft son`);
+// 	}
+// 	else {
+// 		console.log(`${number} Toq son`);
+// 	}
+// 	// document.getElementById("demo").innerHTML = voteable + " to vote";
+// }
+
+// juftTop(Number(prompt('Son kirit')));
+
+// function juftSon(number) {
+// 	const numberstr = String(number);
+// 	const reverstr = numberstr.split('').reverse().join('');
+// 	return Number(reverstr)
+// }
+// console.log(juftSon(prompt("Son kiriting")));
+
+
+
+const inRange = (min, max, number) => {
+	if (number >= min && number <= max) {
+		console.log(`Berilgan ${number} soni ${min} va ${max} orasida`);
 	}
-	document.getElementById("demo").innerHTML = voteable + " to vote";
 }
