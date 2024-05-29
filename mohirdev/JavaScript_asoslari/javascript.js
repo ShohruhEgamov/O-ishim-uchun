@@ -1193,4 +1193,301 @@ document.getElementById("stri").innerHTML = typeof s + "<br>" + typeof c;
 // // Expected output: "012345678"
 
 
+//                                                                        JavaScript loop for in xossalari
 
+const persons = {
+	fname: 'Shohruh',
+	lname: 'Egamov',
+};
+persons.fname = "Farrux";
+let txt = "";
+for (let x in persons) {
+	txt += persons[x] + " ";
+}
+console.log(`Salom janob ${txt}sizni tabriklayman`);
+
+
+
+const numberss = [45, 4, 9, 16, 25];
+
+let txtt = "";
+numberss.forEach(meFunksiyam);
+console.log(txtt);
+
+function meFunksiyam(value, index, array) {
+	txtt += value + " ";
+}
+
+
+const carsr = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of carsr) {
+	text += x + " ";
+}
+
+console.log(text);
+
+
+//                                                       bu yerda shifirlangan matinni topish
+let language = "JavaScript";
+
+let matn = "";
+for (let x of language) {
+	matn += x + "edSCFVCvvnsSjdFV215Cenj";
+}
+let ol = matn;
+ol = ol.replaceAll(/edSCFVCvvnsSjdFV215Cenj/ig, " ");
+
+console.log(ol);
+console.log(matn);
+
+
+
+
+//                                             bu yerda whileni topish
+let son = "";
+let i = 0;
+while (i < 10) {
+	son += "Bu son: " + i + " ";
+	i++;
+}
+
+console.log(son);
+
+
+let soz = "";
+let d = 0;
+
+do {
+	soz += "Bu soz: " + d + " ";
+	d++;
+}
+while (d > 10);
+console.log(soz);
+
+
+const moshina = ["BMW", "Volvo", "Saab", "Ford"];
+
+let m = 0;
+let rusum = "";
+for (; moshina[m];) {
+	rusum += moshina[m] + " ";
+	m++;
+}
+
+console.log(moshina);
+
+
+const moshinaWhile = ["BMW", "Volvo", "Saab", "Ford"];
+
+let mWh = 0;
+let rusumWh = "";
+while (moshinaWhile[mWh]) {
+	rusumWh += moshinaWhile[mWh] + " ";
+	mWh++;
+}
+
+console.log(moshinaWhile);
+
+
+//                                                                        JavaScript break xossalari
+let br = "";
+for (let j = 0; j < 10; j++) {
+	if (j === 3)
+		break;
+	br += j + " ";
+}
+console.log(br);
+
+let brc = "";
+for (let c = 0; c < 10; c++) {
+	if (c === 3)
+		continue;
+	else if (c === 8)
+		break;
+	brc += c + " ";
+}
+console.log(brc);
+
+
+const cars2 = ["BMW", "Volvo", "Saab", "Ford"];
+let text0 = "";
+
+list: {
+	text0 += cars2[0] + "<br>";
+	text0 += cars2[1] + "<br>";
+	break list;
+	text0 += cars2[2] + "<br>";
+	text0 += cars2[3] + "<br>";
+}
+
+console.log(text0);
+
+//                                                                        JavaScript iterator xossalari
+
+function menRaqamim() {
+	let n = 0;
+	return {
+		next: function () {
+			n += 100;
+			return { value: n, done: true };
+		}
+	};
+}
+
+const n = menRaqamim();
+n.next();
+n.next();
+n.next();
+n.next();
+
+console.log(n.next().value);
+
+
+
+buRaqam = {};
+
+buRaqam[Symbol.iterator] = function () {
+	let g = 0;
+	let done = false;
+	return {
+		next() {
+			g += 10;
+			if (g === 100) {
+				done = true;
+			}
+			return { value: g, done: done };
+		}
+	};
+};
+
+let yangi = "";
+for (let i of buRaqam) {
+	yangi += i + " ";
+}
+
+console.log(yangi);
+
+
+//                                                                        JavaScript set xossalari
+let set = new Set([1, 2, 31, 40, 5]);
+console.log(`Bu yerda ${set.size} bor`);
+
+
+const letters1 = new Set();
+letters1.add("a");
+letters1.add("b");
+letters1.add("c");
+
+console.log(letters1.size);
+
+const letters2 = new Set(["a", "b", "c"]);
+
+let text2 = "";
+for (const x of letters2) {
+	text2 += x + " ";
+}
+
+console.log(text2);
+
+// usul has() ichidagi belgi setda bo'lsa true bo'lmasa false chiqaradi
+const letters3 = new Set(["a", "b", "c"]);
+answers = letters3.has("b");
+console.log(answers);
+
+
+const letters4 = new Set(["a", "b", "c"]);
+let text4 = "";
+letters4.forEach(function (value) {
+	text4 += value + " ";
+})
+
+console.log(text4);
+
+// usul entries
+const entr = new Set(["a", "b", "c"]);
+
+const iterator = entr.entries();
+
+let mat = "";
+for (let entry of iterator) {
+	mat += entry + " ";
+}
+
+console.log(mat);
+
+
+//                                                                        JavaScript Map() xossalari
+//Usul get()Xaritadagi kalitning qiymatini oladi:
+//Xaritaga elementlarni quyidagi set()usul bilan qo'shishingiz mumkin:
+//Usul set()mavjud Xarita qiymatlarini o'zgartirish uchun ham ishlatilishi mumkin:
+//Xususiyat size xaritadagi elementlar sonini qaytaradi:
+//Usul delete()xarita elementini olib tashlaydi:
+//Usul clear()xaritadan barcha elementlarni olib tashlaydi:
+//has()Agar kalit xaritada mavjud bo'lsa, usul true ni qaytaradi :
+
+const fruk = new Map([
+	["olma", 500],
+	["banan", 600],
+	["shaftoli", 700]
+]);
+fruk.set("nok", 800)
+fruk.set("olma", 1800)
+let nur = fruk.get("olma");
+console.log(nur);
+console.log(fruk.get("banan"));
+console.log(fruk.delete("shaftoli"));
+console.log(fruk.size);
+
+const frukt = new Map([
+	["olma", 500],
+	["banan", 600],
+	["shaftoli", 700]
+]);
+
+//Usul forEach()xaritadagi har bir kalit/qiymat juftligi uchun qayta qo'ng'iroqni chaqiradi:
+let yana = "";
+frukt.forEach(function (value, key) {
+	yana += key + ": " + value + " ";
+})
+console.log(yana);
+
+//Usul entries()xaritadagi [kalit, qiymatlar] bilan iterator ob'ektini qaytaradi:
+let entre = "";
+for (let entry of frukt.entries()) {
+	entre += entry + " ";
+}
+console.log(entre);
+
+//Usul keys()xaritadagi kalitlarga ega iterator ob'ektini qaytaradi:
+//Usul values()xaritadagi qiymatlar bilan iterator ob'ektini qaytaradi:
+let keyse = "";
+for (const x of frukt.keys()) {
+	keyse += x + " ";
+}
+console.log(keyse);
+
+
+const apples = { name: 'Apples' };
+const bananas = { name: 'Bananas' };
+const oranges = { name: 'Oranges' };
+
+
+const fruits5 = new Map();
+
+
+fruits5.set(apples, 500);
+fruits5.set(bananas, 300);
+fruits5.set(oranges, 200);
+
+console.log(fruits5.get(apples));
+
+//JavaScript Map.groupBy()
+
+const fruits = [
+	{ name: "apples", quantity: 300 },
+	{ name: "bananas", quantity: 500 },
+	{ name: "oranges", quantity: 200 },
+	{ name: "kiwi", quantity: 150 }
+];
