@@ -1221,12 +1221,12 @@ function meFunksiyam(value, index, array) {
 
 const carsr = ["BMW", "Volvo", "Mini"];
 
-let text = "";
+let text0 = "";
 for (let x of carsr) {
-	text += x + " ";
+	text0 += x + " ";
 }
 
-console.log(text);
+console.log(text0);
 
 
 //                                                       bu yerda shifirlangan matinni topish
@@ -1312,17 +1312,17 @@ console.log(brc);
 
 
 const cars2 = ["BMW", "Volvo", "Saab", "Ford"];
-let text0 = "";
+let text8 = "";
 
 list: {
-	text0 += cars2[0] + "<br>";
-	text0 += cars2[1] + "<br>";
+	text8 += cars2[0] + "<br>";
+	text8 += cars2[1] + "<br>";
 	break list;
-	text0 += cars2[2] + "<br>";
-	text0 += cars2[3] + "<br>";
+	text8 += cars2[2] + "<br>";
+	text8 += cars2[3] + "<br>";
 }
 
-console.log(text0);
+console.log(text8);
 
 //                                                                        JavaScript iterator xossalari
 
@@ -1491,3 +1491,173 @@ const fruits = [
 	{ name: "oranges", quantity: 200 },
 	{ name: "kiwi", quantity: 150 }
 ];
+
+function myCallback({ quantity }) {
+	return quantity > 200 ? "ok" : "low";
+}
+
+const groupBy = (array, callback) => {
+	const map = new Map();
+	array.forEach(item => {
+		const key = callback(item);
+		if (!map.has(key)) {
+			map.set(key, []);
+		}
+		map.get(key).push(item);
+	});
+	return map;
+};
+
+const result = groupBy(fruits, myCallback);
+
+let text = "These fruits are Ok:    ";
+for (let x of result.get("ok")) {
+	text += x.name + " " + x.quantity + " ";
+}
+
+text += "  These fruits are low:   ";
+for (let x of result.get("low")) {
+	text += x.name + " " + x.quantity + "  ";
+}
+console.log(text);
+
+console.log(result.get("ok"));
+
+
+
+
+const person8 = {
+	firstName: "Shohruh",
+	lastName: "Egamov",
+	age: 50
+};
+
+let { firstName: name, lastName: familya, country = "UZ" } = person8;
+
+console.log(familya + " " + name + " " + country);
+console.log(person8);
+
+const fruits7 = ["Bananas", "Oranges", "Apples", "Mangos"];
+
+const { [0]: m1, [1]: m2 } = fruits7;
+console.log(m1 + " " + m2);
+
+
+const numbers = [10, 20, 30, 40, 50, 60, 70];
+
+
+const a = numbers.find(num => num < 30);
+const b5 = numbers.find(num => num >= 30 && num < 50);
+const rest = numbers.filter(num => num >= 50);
+
+console.log(a);  // 10
+console.log(b5);  // 30
+console.log(rest);  // [50, 60, 70]
+
+let firstName = "John";
+let lastName = "Doe";
+[firstName, lastName] = [lastName, firstName];
+console.log(firstName + " " + lastName);
+
+
+let qidiru = "Salom men Shohruh";
+let n8 = qidiru.search(/shohruh/i)
+console.log(n8);
+
+
+let almashtir = "Salom Shohruh Egamov men Asad man";
+let javoblari = almashtir.replace(/asad/i, "Diyor");
+console.log(javoblari);
+
+
+let regext = "Salom men Shohruh dasturchiman";
+const pattern = /j/;
+console.log(pattern.test(regext));
+
+
+const obj = /e/.exec("The best things in life are free!");
+let xs = `U ${obj[0]} yerda va ${obj.index} pozitsionda matni esa: ${obj.input}`;
+console.log(xs);
+
+
+function myFunction() {
+	let age = 15;
+	let voteable = (age < 18) ? "Too young" : "Old enough";
+	console.log(voteable + " to vote.");
+}
+
+try {
+	aflet("Salom mehmon");
+}
+catch (err) {
+	err.message;
+}
+
+
+
+
+
+//Raqam yozganda uning raqam yoki son ligini tekshirib hato malumotni chiqaradi
+{/* <h2>JavaScript try catch</h2>
+
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="p01"></p> */}
+
+function myFunction() {
+	const message = document.getElementById("p01");
+	message.innerHTML = "";
+	let x = document.getElementById("demo").value;
+	try {
+		if (x.trim() == "") throw "empty";
+		if (isNaN(x)) throw "not a number";
+		x = Number(x);
+		if (x < 5) throw "too low";
+		if (x > 10) throw "too high";
+	}
+	catch (err) {
+		message.innerHTML = "Input is " + err;
+	}
+}
+
+
+
+let num = 123.456;
+
+// toFixed() ga 100 argumenti berilganda
+try {
+	console.log(num.toFixed(100));
+} catch (e) {
+	console.log(e.name + ": " + e.message);  // RangeError: toFixed() digits argument must be between 0 and 100
+}
+
+try {
+	let arr = new Array(-1);
+} catch (e) {
+	console.log(e.name + ": " + e.message);  // RangeError: Invalid array length
+}
+
+
+function recursive() {
+	try {
+		return recursive();
+	} catch (e) {
+		console.log(e.name + ": " + e.message);  // RangeError: Maximum call stack size exceeded
+	}
+}
+
+recursive();
+
+
+try {
+	let num = 1;
+	num.toFixed(101);  // noto'g'ri argument
+} catch (e) {
+	if (e instanceof RangeError) {
+		console.log("RangeError qo'lga olindi: " + e.message);
+	} else {
+		console.log("Boshqa xato: " + e.message);
+	}
+}

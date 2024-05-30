@@ -20,3 +20,10 @@ function uySozUzunligi(s) {
 const sentence = "Salom Dunyo";
 console.log(uySozUzunligi(sentence));
 // Javob: 5
+
+let regext = "Salom men Shohruh dasturchiman";
+const pattern = /j/;
+console.log(pattern.test(regext));
+
+
+const obj = /e/.exec("The best things in life are free!");
