@@ -1661,3 +1661,128 @@ try {
 		console.log("Boshqa xato: " + e.message);
 	}
 }
+
+
+try {
+	let result = someFunction();
+} catch (error) {
+	console.error("Xato qo'lga olindi:", error.message);
+}
+
+try {
+	// Xatolik bo'lishi mumkin bo'lgan kod
+	let result = someFunction();
+} catch (error) {
+	// Xato qo'lga olinadi va qayta ishlanadi
+	console.error(error);
+}
+
+try {
+	let result = someFunction();
+} catch (error) {
+	console.error("Xato qo'lga olindi:", error.message);
+} finally {
+	console.log("Bu har doim bajariladi.");
+}
+
+
+try {
+	// Xato bo'lishi mumkin bo'lgan kod
+	let result = someFunction();
+
+	// Sun'iy xato yaratish
+	if (result < 0) {
+		throw new Error("Natija manfiy bo'lishi mumkin emas.");
+	}
+
+} catch (error) {
+	// Xato qo'lga olinadi va qayta ishlanadi
+	console.error("Xato qo'lga olindi:", error.message);
+} finally {
+	// Bu blok har doim bajariladi
+	console.log("Bu har doim bajariladi.");
+}
+
+try {
+	eval('foo bar');
+} catch (e) {
+	if (e instanceof EvalError) {
+		console.error("EvalError qo'lga olindi:", e.message);
+	} else {
+		console.error("Boshqa xato qo'lga olindi:", e.message);
+	}
+}
+
+
+try {
+	eval('var x = ;');  // Sintaksis xatosi
+} catch (e) {
+	console.log(e.name);     // SyntaxError
+	console.log(e.message);  // Unexpected token ;
+	console.log(e.stack);    // Xato stack izi
+}
+
+
+try {
+	// Bu yerda xato bo'lishi mumkin bo'lgan kod
+	let result = someFunction();
+} catch (e) {
+	if (e instanceof RangeError) {
+		console.error("RangeError qo'lga olindi:", e.message);
+	} else if (e instanceof ReferenceError) {
+		console.error("ReferenceError qo'lga olindi:", e.message);
+	} else if (e instanceof TypeError) {
+		console.error("TypeError qo'lga olindi:", e.message);
+	} else if (e instanceof URIError) {
+		console.error("URIError qo'lga olindi:", e.message);
+	} else {
+		console.error("Boshqa xato qo'lga olindi:", e.message);
+	}
+
+
+}
+
+let salom = "";
+salom = function () {
+	return "Salom Dunyo"
+}
+console.log(hello());
+
+
+let hello5 = "";
+
+hello5 = () => {
+	return "Salom Dunyo"
+}
+
+console.log(hello5());
+
+
+let hello = "";
+hello1 = (val, alik) => "Salom " + val + " " + alik;
+console.log(hello1("Dunyo", "Shohruh"));
+
+//hello = val => "Hello " + val;
+let x89 = "";
+salom1 = () => {
+	console.log(x89 += this);
+}
+
+window.addEventListener("load", salom1)
+
+console.log(salom1("Salom").addEventListener("clik", salom1));
+
+
+class myCarf {
+	constructor(brand, year, color) {
+		this.brand = brand;
+		this.year = year;
+		this.color = color;
+	}
+}
+
+const myyCar1 = new Car("BMW", 2014, "black");
+const myyCar2 = new Car("Lasetti", 2019, "width");
+const myyCar3 = new Car("Tico", 2018, "red");
+
+console.log(myyCar1.brand + " " + myyCar2.brand);
