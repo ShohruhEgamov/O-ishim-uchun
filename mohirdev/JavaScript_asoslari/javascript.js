@@ -1786,3 +1786,38 @@ const myyCar2 = new Car("Lasetti", 2019, "width");
 const myyCar3 = new Car("Tico", 2018, "red");
 
 console.log(myyCar1.brand + " " + myyCar2.brand);
+
+
+let textjson = '{ "employees" : [' +
+	'{ "firstName":"Shohruh" , "lastName":"Egamov" },' +
+	'{ "firstName":"Farrux" , "lastName":"Egamov" },' +
+	'{ "firstName":"Diyorbek" , "lastName":"Egamov" },' +
+	'{ "firstName":"Bekmirza" , "lastName":"Egamov" } ]}';
+
+const objeckt = JSON.parse(textjson);
+console.log(objeckt.employees[2].firstName + " " + objeckt.employees[1].lastName);
+
+let x = 0.1;
+let y = 0.2;
+// let z = x + y;  // bu yerda hazo beradi 0.30000000000000004
+let z = (x * 10 + y * 10) / 10; // bu yerda to'ri beradi 0.3
+console.log(z);
+
+
+let y5 = "hello \
+word";            //Agar buzishni hohlasangiz bunday \ usuldan foydalaning
+
+console.log(y5);
+
+if (typeof myObj !== "undefined" && myObj !== null);
+
+
+
+function Personn(ism, familya, yosh) {
+	this.firstName = ism;
+	this.lastName = familya;
+	this.age = yosh;
+}
+
+const meningOtam = new Personn("Shuhrat", "Egamov", 56);
+const meningOnam = new Personn("Shuhrat", "Egamov", 56);
