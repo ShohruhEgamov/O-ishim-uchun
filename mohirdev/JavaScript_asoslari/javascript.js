@@ -1821,3 +1821,219 @@ function Personn(ism, familya, yosh) {
 
 const meningOtam = new Personn("Shuhrat", "Egamov", 56);
 const meningOnam = new Personn("Shuhrat", "Egamov", 56);
+
+
+
+function Person2(first, last, age, eye) {
+	this.firstName = first;
+	this.lastName = last;
+	this.age = age;
+	this.eyeColor = eye;
+}
+
+Person2.prototype.natsional = "English";
+const myFather = new Person2("John", "Doe", 50, "blue");
+console.log(myFather.natsional);
+
+/*Object.entries() metodi JavaScript-da obyektning o'ziga tegishli sanab o'tiladigan 
+xossalari (enumerable properties) va xususiyatlarining [key, value] juftliklari ko'rinishidagi 
+massivlarni qaytaradi. Bu metod obyektning barcha sanab 
+o'tiladigan xossalarini o'z ichiga olgan massivni hosil qiladi.*/
+const person10 = {
+	firstName: "Shohruh",
+	lastName: "Egamov",
+	age: 23,
+	eyeColor: "Qora"
+};
+
+const person20 = { firstName: "Shuhrat", lastName: "Ortikov" };
+Object.assign(person10, person20);
+
+let texttt = Object.entries(person10);
+console.log(texttt);
+
+
+const objg = { a: 1, b: 2, c: 3 };
+
+const entries = Object.entries(objg);
+
+console.log(entries); // [ ['a', 1], ['b', 2], ['c', 3] ]
+
+
+const objh = { a: 1, b: 2, c: 3 };
+
+for (const [key, value] of Object.entries(objh)) {
+	console.log(`${key}: ${value}`);
+}
+
+// Natija:
+// a: 1
+// b: 2
+// c: 3
+
+
+const fruitsh = { Bananas: 300, Oranges: 200, Apples: 500 };
+
+let texth = "";
+
+for (let [fruit, amount] of Object.entries(fruitsh)) {
+	texth += fruit + ": " + amount + " ";
+}
+
+console.log(texth);
+
+
+const fruitsb = { Bananas: 300, Oranges: 200, Apples: 500 };
+const myMap = new Map(Object.entries(fruitsb));
+console.log(myMap);
+
+/*Object.fromEntries() metodi JavaScript-da Object.entries() ning teskarisi bo'lib, 
+[key, value] juftliklari ko'rinishidagi massivdan ob'ekt hosil qiladi. Bu metod massivlar yoki xaritalar (maps) 
+ko'rinishidagi ma'lumotlarni ob'ekt sifatida qayta shakllantirish uchun ishlatiladi.*/
+
+const objk = { a: 1, b: 2, c: 3 };
+
+const transformed = Object.entries(objk).map(([key, value]) => [key, value * 2]);
+
+const newObj = Object.fromEntries(transformed);
+
+console.log(newObj); // { a: 2, b: 4, c: 6 }
+
+
+const entiress = [
+	['a', 1],
+	['b', 2],
+	['c', 3]
+];
+
+const objektlar = Object.fromEntries(entiress);
+console.log(objektlar);
+
+/*Object.values() metodi JavaScript-da ob'ektning o'ziga tegishli barcha sanab o'tiladigan 
+(enumerable) xossalarining qiymatlarini massiv ko'rinishida qaytaradi. Bu metod kalitlarga 
+e'tibor bermay, faqat qiymatlarni oladi.*/
+
+const obdj = { a: 1, b: 2, c: 3 };
+const valuesdj = Object.values(obdj);
+console.log(valuesdj);
+
+
+const nestedObj = {
+	a: 1,
+	b: { nested: 2 },
+	c: 3
+};
+
+const values = Object.values(nestedObj);
+console.log(values); // [1, { nested: 2 }, 3]
+
+
+
+const scores = { Alice: 550, Bob: 70, Charlie: 90 };
+
+const totalScore = Object.values(scores).reduce((acc, score) => acc + score, 0);
+
+console.log(totalScore);
+
+const objfl = { a: 1, b: 2, c: 3, d: 4 };
+
+const filteredValues = Object.values(objfl).filter(value => value > 2);
+
+console.log(filteredValues); // [3, 4]
+
+
+// groupBy funksiyasi
+function groupBy(array, key) {
+	return array.reduce((result, currentValue) => {
+		// Kalit qiymatini oling
+		const groupKey = currentValue[key];
+		// Agar guruh mavjud bo'lmasa, yangi guruh yarating
+		if (!result[groupKey]) {
+			result[groupKey] = [];
+		}
+		// Hozirgi qiymatni tegishli guruhga qo'shing
+		result[groupKey].push(currentValue);
+		return result;
+	}, {});
+}
+
+// Misol massiv
+const fruitst = [
+	{ name: "apples", quantity: 300 },
+	{ name: "bananas", quantity: 500 },
+	{ name: "oranges", quantity: 200 },
+	{ name: "kiwi", quantity: 150 }
+];
+
+// Guruplash
+const groupedFruitsf = groupBy(fruitst, "name");
+
+console.log(groupedFruitsf);
+/*
+{
+  apples: [ { name: 'apples', quantity: 300 } ],
+  bananas: [ { name: 'bananas', quantity: 500 } ],
+  oranges: [ { name: 'oranges', quantity: 200 } ],
+  kiwi: [ { name: 'kiwi', quantity: 150 } ]
+}
+*/
+
+
+// groupBy funksiyasi
+function groupBy(array, fn) {
+	return array.reduce((result, currentValue) => {
+		// Kalit qiymatini funksiya yordamida oling
+		const groupKey = fn(currentValue);
+		// Agar guruh mavjud bo'lmasa, yangi guruh yarating
+		if (!result[groupKey]) {
+			result[groupKey] = [];
+		}
+		// Hozirgi qiymatni tegishli guruhga qo'shing
+		result[groupKey].push(currentValue);
+		return result;
+	}, {});
+}
+
+// Misol massiv
+const fruitsj = [
+	{ name: "apples", quantity: 300 },
+	{ name: "bananas", quantity: 500 },
+	{ name: "oranges", quantity: 200 },
+	{ name: "kiwi", quantity: 150 }
+];
+
+// Guruplash funksiyasi
+function quantityCategory(fruit) {
+	return fruit.quantity > 200 ? 'ok' : 'low';
+}
+
+// Guruplash
+const groupedFruits = groupBy(fruitsj, quantityCategory);
+
+console.log(groupedFruits);
+/*
+{
+  ok: [
+	{ name: 'apples', quantity: 300 },
+	{ name: 'bananas', quantity: 500 }
+  ],
+  low: [
+	{ name: 'oranges', quantity: 200 },
+	{ name: 'kiwi', quantity: 150 }
+  ]
+}
+*/
+
+
+const person45 = {
+	fname: "John",
+	lname: "Doe",
+	age: 25
+};
+
+let txtTY = "";
+for (let x in person45) {
+	txtTY += person45[x] + " ";
+}
+
+console.log(txtTY);
