@@ -2037,3 +2037,349 @@ for (let x in person45) {
 }
 
 console.log(txtTY);
+
+
+const person90 = {
+	firstName: "John",
+	lastName: "Doe",
+	language: "EN"
+};
+
+Object.defineProperty(person90, "year", { value: "2000" })
+// O'zgartirish
+Object.defineProperty(person90, "language", { value: "NO" })
+
+console.log(`Mijozning tug'ilgan kuni ${person90.year}`);
+console.log(`Mijozning Tili ${person90.language}`);
+
+
+const person55 = {
+	firstName: "John",
+	lastName: "Doe",
+	language: "en",
+	get bang() {
+		return this.firstName.toUpperCase();
+	}
+};
+console.log(person55.bang);
+
+
+const personSet = {
+	firstName: "John",
+	lastName: "Doe",
+	language: "en",
+	set lang(lang) {
+		this.language = lang.toUpperCase();
+	}
+};
+personSet.lang = "ru";
+
+console.log(personSet.language);
+
+
+const objDef = {};
+
+Object.defineProperty(objDef, "name", {
+	value: "Alice",
+	writable: false,
+	enumerable: false,
+	configurable: true
+});
+
+const descriptor = Object.getOwnPropertyDescriptor(obj, "name");
+
+console.log(descriptor);
+/*
+{
+  value: "Alice",
+  writable: false,
+  enumerable: false,
+  configurable: true
+}
+*/
+
+const personEx = { firstName: "John", lastName: "Doe" };
+Object.preventExtensions(personEx);
+let answer = Object.isExtensible(personEx);
+console.log(answer);
+
+
+const personSel = {
+	firstName: "John",
+	lastName: "Doe",
+	age: 50,
+	eyeColor: "blue"
+};
+Object.seal(personSel);
+let textSel = "";
+try {
+	delete personSel.age;
+	textSel = Object.values(personSel);
+}
+catch (err) {
+	textSel = err.message;
+}
+
+console.log(textSel);
+
+
+
+//                                              JavaScript funktsiyasi ta'riflari
+
+function sum(...args) {
+	let sum = 0;
+	for (let a of args)
+		sum += a;
+	return sum;
+}
+
+let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+console.log(x);
+
+
+function findMax() {
+	let max = -Infinity;
+	for (let i = 0; i < arguments.length; i++) {
+		if (arguments[i] > max) {
+			max = arguments[i];
+		}
+	}
+	return max;
+}
+console.log(findMax(4, 4, 74, 7, 6, 6, 8, 2, 6, 87));
+
+
+class Car {
+	constructor(brand, year) {
+		this.brand = brand;
+		this.year = year;
+	}
+}
+const myCar1 = new Car("Ford", 2014);
+const myCar2 = new Car("Audi", 2014);
+
+console.log(myCar1.brand + " " + myCar2.brand);
+
+
+class Yosh {
+	constructor(name, year) {
+		this.name = name;
+		this.year = year;
+	}
+	age() {
+		const date = new Date();
+		return date.getFullYear() - this.year;
+	}
+}
+
+const myAge = new Yosh("Shohruh", 2000);
+console.log("Mening ismim " + myAge.name + " men " + myAge.age() + " yoshdaman");
+
+
+class Car {
+	constructor(brend) {
+		this.carName = brend;
+	}
+	present() {
+		return "Men " + this.carName + " ga egaman";
+	}
+}
+
+class Model extends Car {
+	constructor(brend, model) {
+		super(brend);
+		this.modelName = model;
+	}
+	show() {
+		return this.present() + ", modelim " + this.modelName;
+	}
+}
+
+const myCar = new Model("Toyota", "Camry");
+console.log(myCar.show());
+console.log(myCar.present());
+
+
+class Car1 {
+	constructor(brand) {
+		this._carname = brand;
+	}
+	set carname(x) {
+		this._carname = x;
+	}
+	get carname() {
+		return this._carname;
+	}
+}
+
+const myCar3 = new Car1("Ford");
+myCar.carname = "Volvo";
+console.log(myCar3.carname);
+
+
+class Car2 {
+	constructor(name) {
+		this.ism = name;
+	}
+	static hello(x) {
+		return ("Assalomu alaykum!!! ") + x.ism;
+	}
+}
+
+const myCar4 = new Car2("Shohruh");
+// console.log(myCar4.ism);
+// console.log(Car2.hello());
+console.log(Car2.hello(myCar4));
+
+
+function myDispleniya(some) {
+	console.log(some);
+}
+
+function myCalculyator(num1, num2) {
+	let sum = num1 + num2;
+	return sum;
+	// myDisplayer(sum);
+}
+
+// function myFirs() {
+// 	myDispleniya("Hello");
+// }
+
+// function mySecond() {
+// 	myDispleniya("goodbye")
+// }
+
+// myFirs();
+// mySecond();
+
+let results = myCalculyator(5, 6);
+myDispleniya(results);
+
+
+function myDisplayer(something) {
+	console.log(something);
+}
+
+function myCalc(num1, num2, myCalBack) {
+	let sum = num1 + num2;
+	myCalBack(sum);
+}
+
+myCalc(5, 8, myDisplayer);
+
+const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+const posNumbers = removeNeg(myNumbers, (x) => x <= 0);
+console.log(posNumbers);
+
+function removeNeg(numbers, callback) {
+	const myArray = [];
+	for (const x of numbers) {
+		if (callback(x)) {
+			myArray.push(x);
+		}
+	}
+	return myArray;
+}
+
+
+let inputDate = "2024-02-14";
+let startDate = new Date(inputDate);
+let tday = new Date();
+let diff = tday - startDate;
+let dayDiff = Math.floor(diff / (1000 * 60 * 60 * 24));
+console.log(dayDiff + " kun bo'ldi");
+console.log(dayDiff - 365 + " kun qoldi");
+
+setTimeout(mySevishim, 3000);
+function mySevishim() {
+	console.log("Men seni sevaman");
+}
+
+setTimeout(myUylanish, 5000);
+function myUylanish() {
+	console.log('Menga turmushga chiqasanmi');
+}
+
+setInterval(mySoniya, 1000);
+function mySoniya() {
+	let d = new Date();
+	console.log(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
+
+}
+
+
+
+
+function myVada(some) {
+	console.log(some);
+}
+
+let myPromise = new Promise(function (myResolve, myRejact) {
+	let x = 1;
+	if (x == 0) {
+		myResolve("OK");
+	}
+	else {
+		myRejact("Error");
+	}
+});
+
+myPromise.then(
+	function (value) { myVada(value); },
+	function (error) { myVada(error); }
+);
+
+function myAsin(some) {
+	console.log(some);
+}
+
+async function myFunkAs() { return 'Hello' };
+
+myFunkAs().then(
+	function (value) { myAsin(value); },
+	function (error) { myAsin(error); }
+);
+
+async function myDist() {
+	let myProm = new Promise(function (resovle) {
+		setTimeout(function () {
+			resovle('Hello');
+		}, 3000);
+	});
+	console.log(await myProm);
+}
+
+function delaay(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function asyncFunction() {
+	console.log("Start");
+
+	await delaay(10000); // 2 soniya kuting
+
+	console.log("End");
+}
+
+asyncFunction();
+
+async function fetchData() {
+	try {
+		let response = await fetch('https://api.example.com/data');
+		let data = await response.json();
+		console.log(data);
+	} catch (error) {
+		console.error('Error:', error);
+	}
+}
+
+
+function fetchData() {
+	fetch('https://api.example.com/data')
+		.then(response => response.json())
+		.then(data => console.log(data))
+		.catch(error => console.error('Error:', error));
+}
+
+
