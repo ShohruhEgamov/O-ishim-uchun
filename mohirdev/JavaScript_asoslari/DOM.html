@@ -118,7 +118,7 @@
 		<p id="p2">This is another paragraph.</p>
 	</div> -->
 
-	<h2>JavaScript HTML DOM</h2>
+	<!-- <h2>JavaScript HTML DOM</h2>
 	<p>Add a new HTML Element.</p>
 
 	<div id="div1">
@@ -132,7 +132,45 @@
 		const element = document.getElementById("div1");
 		const child = document.getElementById("p1");
 		element.insertBefore(para, child);
-	</script>
+	</script> -->
+
+	<!-- <p id="lokal"></p>
+	<input type="button" value="Load new document" onclick="newDoc()">
+	<script>
+		document.getElementById("lokal").innerHTML =
+			// "The full URL of this page is:<br>" + window.location.href;
+			// "The full URL of this page is:<br>" + window.location.hostname;
+			//"The full URL of this page is:<br>" + window.location.pathname;
+			//"The full URL of this page is:<br>" + window.location.protocol;
+			// navigator.appVersion;
+			navigator.platform;
+		function newDoc() {
+			window.location.assign("https://www.w3schools.com")
+		}
+	</script> -->
+
+	<!-- <h2>The Navigator Object</h2>
+
+	<p>The appName property returns the application name of the browser:</p>
+
+	<p id="demo"></p>
+
+	<p>Strange enough, "Netscape" is the application name for IE11, Chrome, Firefox, and Safari.</p>
+
+	<script>
+		document.getElementById("demo").innerHTML =
+			"navigator.appName is " + navigator.appName;
+	</script> -->
+
+
+	<h2>JavaScript Confirm Box</h2>
+
+
+	<button onclick="myFunction()">Try it</button>
+
+	<p id="demo"></p>
+
+
 	<script src=" DOM.js"></script>
 </body>
 

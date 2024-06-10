@@ -162,3 +162,26 @@ para.appendChild(node);
 const element = document.getElementById("div1");
 const child = document.getElementById("p1");
 element.insertBefore(para, child);
+
+
+
+function myFunction() {
+	var txt;
+	if (confirm("Bu buttonni bos")) {
+		txt = "Siz bunga rozisiz!";
+	} else {
+		txt = "Siz bunga norozisiz!";
+	}
+	document.getElementById("demo").innerHTML = txt;
+}
+
+function myFunction() {
+	let text;
+	let person = prompt("Please enter your name:", "Shohruh Egamov");
+	if (person == null || person == "") {
+		text = "User cancelled the prompt.";
+	} else {
+		text = "Hello " + person + "! How are you today?";
+	}
+	document.getElementById("demo").innerHTML = text;
+}
