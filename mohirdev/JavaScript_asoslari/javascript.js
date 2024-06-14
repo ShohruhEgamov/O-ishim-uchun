@@ -1237,7 +1237,7 @@ for (let x of language) {
 	matn += x + "edSCFVCvvnsSjdFV215Cenj";
 }
 let ol = matn;
-ol = ol.replaceAll(/edSCFVCvvnsSjdFV215Cenj/ig, " ");
+ol = ol.replaceAll(/edSCFVCvvnsSjdFV215Cenj/ig, "");
 
 console.log(ol);
 console.log(matn);
@@ -2383,3 +2383,59 @@ function fetchData() {
 }
 
 
+const fs = require('fs');
+
+// Mavjud JSON faylini o'qish
+fs.readFile('json.json', 'utf8', (err, data) => {
+	if (err) {
+		console.error(err);
+		return;
+	}
+
+	// JSON ma'lumotni parse qilish
+	let jsonData = JSON.parse(data);
+
+	// Yangi ma'lumotlar
+	let yangiMalumot = {
+		"ism": "Alisher",
+		"yosh": 30,
+		"kasb": "Dasturchi"
+	};
+
+	// Yangi ma'lumotlarni qo'shish
+	jsonData.push(yangiMalumot);
+
+	// Yangilangan ma'lumotlarni JSON fayliga yozish
+	fs.writeFile('yangilangan_fayl.json', JSON.stringify(jsonData, null, 4), 'utf8', (err) => {
+		if (err) {
+			console.error(err);
+			return;
+		}
+		console.log('JSON fayli muvaffaqiyatli yangilandi!');
+	});
+});
+
+
+// XMLHttpRequest obyektini yaratish
+const xhr = new XMLHttpRequest();
+
+// So'rovni ochish
+xhr.open('POST', 'https://example.com/api', true);
+
+// Sarlavhalarni o'rnatish
+xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+xhr.setRequestHeader('Authorization', 'Bearer token_value');
+
+// So'rovni yuborish
+xhr.send(JSON.stringify({
+	name: "Alisher",
+	age: 30,
+	job: "Dasturchi"
+}));
+
+// Javobni olish
+xhr.onreadystatechange = function () {
+	if (xhr.readyState === 4 && xhr.status === 200) {
+		console.log('Serverdan javob:', xhr.responseText);
+	}
+};
